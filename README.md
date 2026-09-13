@@ -1,72 +1,94 @@
 # Mohammed Zeeshan — Developer Portfolio
 
-A terminal-inspired personal portfolio for **Mohammed Zeeshan**, focused on Java full-stack development, Spring Boot, REST APIs, SQL and practical software engineering.
+A modern, interactive developer portfolio for **Mohammed Zeeshan**, focused on Java full-stack development, Spring Boot, REST APIs, databases, DSA, and practical software engineering.
 
-## Included
+The portfolio includes project showcases, an AI assistant, blog/content sections, recommendations, a contact form, and a PostgreSQL-backed API.
 
-- Terminal-style portfolio UI based on the original portfolio template
-- Java / Spring Boot / REST / SQL skills and learning roadmap
-- Featured projects with GitHub and live-demo links
-- Upcoming-projects roadmap clearly marked as planned
-- Resume PDF served from `/MohammedZeeshan__Resume.pdf`
-- GitHub, LinkedIn, LeetCode, GeeksForGeeks, Code360, HackerRank, CodeChef and Codolio links
-- About, timeline, currently-building and recommendations sections from the template
-- Contact form and direct email contact
-- Portfolio AI assistant with Zeeshan-specific context **and general-purpose Q&A**
-- PostgreSQL + Prisma-backed project/content data
+---
 
-## Projects
+## ✨ Highlights
 
-### Smart Attendance System
-Python, Flask, OpenCV, face_recognition, SQLite
+- Modern interactive portfolio UI
+- Responsive design for desktop and mobile
+- Featured projects and dedicated project pages
+- Complete projects listing with completed and ongoing work
+- Project details, technology stacks, GitHub repositories and live demos
+- About, engineering, learning roadmap and recommendations sections
+- Resume available directly from the portfolio
+- Portfolio AI assistant focused on Zeeshan and software-engineering topics
+- Contact form backed by PostgreSQL
+- Contact email notifications using Resend
+- PostgreSQL database with Prisma ORM
+- Express API
+- Next.js frontend
+- TypeScript throughout the application
+- Turborepo/pnpm monorepo structure
+- Designed for Vercel deployment
 
-- GitHub: https://github.com/zeeshanverse/smart-attendance-system
-- Live demo: https://smart-attendance-system-tvmk.onrender.com/api/auth/demo
+---
 
-### MyMeal
-Flask, JavaScript, HTML, CSS
+## 🛠️ Tech Stack
 
-- GitHub: https://github.com/zeeshanverse/project-E-commerce-Website-MyMeal-
-- Live demo: https://mymeal.onrender.com
+### Frontend
 
-### Banking System
-Java, Spring Boot, PostgreSQL, JPA, JDBC, JWT
+- Next.js
+- React
+- TypeScript
+- Tailwind CSS
+- CSS
 
-- GitHub: https://github.com/zeeshanverse/banking-system-springboot
+### Backend
 
-## Local development
+- Node.js
+- Express
+- TypeScript
 
-From the repository root:
+### Database
 
-```powershell
-pnpm db:migrate
-pnpm db:generate
-pnpm dev
-```
+- PostgreSQL
+- Prisma ORM
 
-Then open `http://localhost:3000`.
+### AI
 
-The root `.env` must contain a valid PostgreSQL connection and the API's LLM configuration. Never commit `.env` or real credentials.
+- AI SDK
+- OpenAI-compatible LLM endpoints
+- OpenAI
+- OpenRouter
+- Local OpenAI-compatible LLM support
 
-## Local development
+### Email
 
-From the `portfolio-main` directory:
+- Resend
+- Nodemailer / SMTP support for local development
 
-```powershell
-pnpm install
-Copy-Item .env.example .env
-pnpm db:generate
-pnpm db:migrate
-pnpm db:seed
-pnpm dev
-```
+### Tooling
 
-The web app runs on `http://localhost:3000` and the API runs on `http://localhost:3001` in local development.
+- pnpm
+- Turborepo
+- Git
+- GitHub
+- Docker
+- Vitest
 
-### AI assistant
+---
 
-The assistant supports both portfolio questions and general-purpose questions. It uses any OpenAI-compatible endpoint configured through `AI_BASE_URL`, `AI_API_KEY`, and `AI_MODEL`. For a hosted free-model setup, set `OPENROUTER_API_KEY`; the app then uses OpenRouter's `openrouter/free` router by default. If `OPENAI_API_KEY` is supplied instead, it uses OpenAI automatically. A local OpenAI-compatible LLM can be used through the `LLAMA_*` variables. Browser requests use the same-origin Next.js backend proxy, so Chat and Contact do not depend on cross-origin browser CORS.
+## 📁 Project Structure
 
-### Contact notifications
-
-The contact form stores submissions in PostgreSQL and can email the site owner plus an acknowledgement to the visitor. Local development can use Gmail SMTP with `SMTP_HOST`, `SMTP_PORT`, `SMTP_SECURE`, `SMTP_USER`, `SMTP_PASS`, `SMTP_FROM`, and `CONTACT_TO`. On Render Free, use the HTTPS-based Resend API instead: configure `RESEND_API_KEY`, `RESEND_FROM`, and `CONTACT_TO`. Never commit `.env` or API keys.
+```text
+Portfolio-2/
+├── apps/
+│   ├── web/                 # Next.js portfolio frontend
+│   └── api/                 # Express API
+│
+├── packages/
+│   ├── db/                  # Prisma schema, migrations and database layer
+│   └── shared/              # Shared domain types and DTOs
+│
+├── docs/                    # Architecture and project documentation
+├── postman/                 # API collections
+├── scripts/                 # Utility/setup scripts
+│
+├── package.json
+├── pnpm-workspace.yaml
+├── turbo.json
+└── README.md
