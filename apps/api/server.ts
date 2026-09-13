@@ -45,6 +45,9 @@ import { ResendEmailService } from './src/adapters/resend.email.js'
 import { LocalDiskStorage } from './src/adapters/local-disk.storage.js'
 import { composeApp } from './src/container.js'
 
+// Vercel's zero-config Express detection statically scans this file for an
+// `import express` statement — keep this even though composeApp() is what
+// actually builds the app instance.
 void express
 
 /**
@@ -149,14 +152,23 @@ const app = composeApp({
 
 const port = process.env.PORT ? Number(process.env.PORT) : 3000
 
-const server = app.listen(port, () =>
-  console.log(`API listening on port ${port}`),
-)
+// Vercel invokes the exported app directly per-request; it must not bind a
+// port or keep a process alive. Only listen() when running as a normal
+// long-lived server (local dev, Docker/Render, etc).
+if (!process.env.VERCEL) {
+  const server = app.listen(port, () =>
+    console.log(`API listening on port ${port}`),
+  )
 
-const shutdown = async () => {
-  server.close()
-  await prisma.$disconnect()
+  const shutdown = async () => {
+    server.close()
+    await prisma.$disconnect()
+  }
+
+  process.on('SIGTERM', shutdown)
+  process.on('SIGINT', shutdown)
 }
 
-process.on('SIGTERM', shutdown)
-process.on('SIGINT', shutdown)
+// Required for Vercel's zero-config Express detection: it looks for a
+// default export of the Express app from server.ts/app.ts/index.ts.
+export default app
