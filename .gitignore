@@ -10,3 +10,5 @@ packages/db/prisma/src/generated
 var/
 apps/api/var/
 out/
+
+.env.backup
