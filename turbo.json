@@ -3,7 +3,18 @@
   "tasks": {
     "build": {
       "dependsOn": ["^build"],
-      "outputs": [".next/**", "!.next/cache/**", "dist/**"]
+      "outputs": [".next/**", "!.next/cache/**", "dist/**"],
+      "env": [
+        "PORT",
+        "POSTGRES_USER",
+        "POSTGRES_PASSWORD",
+        "POSTGRES_DB",
+        "DATABASE_URL",
+        "CORS_ORIGIN",
+        "RESEND_API_KEY",
+        "RESEND_FROM",
+        "CONTACT_TO"
+      ]
     },
     "dev": {
       "cache": false,
