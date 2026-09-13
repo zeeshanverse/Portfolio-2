@@ -2,7 +2,7 @@ import type {
   AuditLog as PrismaAuditLog,
   PrismaClient,
   Prisma,
-} from '../../../prisma/src/generated/prisma'
+} from '../../generated/prisma/client.js'
 import type { AuditLog, CreateAuditLogInput, Paginated, PaginationOpts } from '@portfolio/shared'
 
 function toAuditLogMetadata(metadata: PrismaAuditLog['metadata']): Record<string, unknown> | null {

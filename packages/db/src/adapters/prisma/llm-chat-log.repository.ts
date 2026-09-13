@@ -1,4 +1,4 @@
-import type { PrismaClient } from '../../../prisma/src/generated/prisma'
+import type { PrismaClient } from '../../generated/prisma/client.js'
 import type { LlmChatLog, CreateLlmChatLogInput } from '@portfolio/shared'
 
 export class PrismaLlmChatLogRepository {

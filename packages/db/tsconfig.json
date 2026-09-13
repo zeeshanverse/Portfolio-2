@@ -6,7 +6,7 @@
     "declaration": true,
     "paths": {
       "@db": ["./src/index"],
-      "@db/client": ["./prisma/src/generated/prisma"],
+      "@db/client": ["./src/generated/prisma/client"],
       "@db/*": ["./src/*"]
     }
   },

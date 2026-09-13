@@ -1,4 +1,4 @@
-import type { PrismaClient, Prisma } from '../../../prisma/src/generated/prisma'
+import type { PrismaClient, Prisma } from '../../generated/prisma/client.js'
 import type {
   Project,
   ProjectWithTagsAndImages,

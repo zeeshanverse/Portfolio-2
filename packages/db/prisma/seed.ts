@@ -1,7 +1,7 @@
 import { config } from 'dotenv'
 import { resolve } from 'node:path'
 import { PrismaPg } from '@prisma/adapter-pg'
-import { PrismaClient } from '../prisma/src/generated/prisma/index.js'
+import { PrismaClient } from '../src/generated/prisma/client.js'
 
 // prisma db seed runs from packages/db, so explicitly load the monorepo root .env.
 config({ path: resolve(import.meta.dirname, '../../.env') })

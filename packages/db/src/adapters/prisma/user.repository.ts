@@ -1,4 +1,4 @@
-import type { PrismaClient } from '../../../prisma/src/generated/prisma'
+import type { PrismaClient } from '../../generated/prisma/client.js'
 import type { User, CreateUserInput, UpdateUserInput } from '@portfolio/shared'
 import { BadRequestError } from '@portfolio/shared'
 import { isPrismaError } from '../../utils'
