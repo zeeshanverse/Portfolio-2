@@ -12,3 +12,4 @@ apps/api/var/
 out/
 
 .env.backup
+.vercel
