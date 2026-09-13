@@ -3,8 +3,9 @@
   "compilerOptions": {
     "outDir": "dist",
     "rootDir": ".",
+    "baseUrl": ".",
     "paths": {
-      "@api/*": ["./src/*"]
+      "@api/*": ["src/*"]
     }
   },
   "include": ["src", "server.ts"],
