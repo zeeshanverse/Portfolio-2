@@ -3,9 +3,7 @@
   "framework": "express",
   "functions": {
     "server.ts": {
-      "includeFiles": [
-        "../../packages/db/prisma/src/generated/prisma/**"
-      ]
+      "includeFiles": "../../packages/db/prisma/src/generated/prisma/**"
     }
   }
 }
