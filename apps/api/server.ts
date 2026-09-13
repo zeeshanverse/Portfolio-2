@@ -45,18 +45,25 @@ import { ResendEmailService } from './src/adapters/resend.email.js'
 import { LocalDiskStorage } from './src/adapters/local-disk.storage.js'
 import { composeApp } from './src/container.js'
 
+void express
+
 /**
  * Selects the storage backend from STORAGE_DRIVER. Adding an `s3` driver later
  * (R2/AWS) is the only change needed here — nothing downstream knows or cares.
  */
 function createStorage(): IStorageService {
   const driver = process.env.STORAGE_DRIVER ?? 'local'
+
   switch (driver) {
     case 'local': {
       const root = process.env.MEDIA_ROOT ?? path.resolve('var/media')
-      const baseUrl = process.env.MEDIA_BASE_URL ?? `http://localhost:${process.env.PORT ?? 3000}`
+      const baseUrl =
+        process.env.MEDIA_BASE_URL ??
+        `http://localhost:${process.env.PORT ?? 3000}`
+
       return new LocalDiskStorage(root, baseUrl)
     }
+
     default:
       throw new Error(`Unknown STORAGE_DRIVER: ${driver}`)
   }
@@ -66,17 +73,28 @@ const prisma = createPrismaClient()
 
 // Outbound adapters
 const postRepository: IPostRepository = new PrismaPostRepository(prisma)
-const projectRepository: IProjectRepository = new PrismaProjectRepository(prisma)
-const contactRepository: IContactRepository = new PrismaContactRepository(prisma)
+const projectRepository: IProjectRepository =
+  new PrismaProjectRepository(prisma)
+const contactRepository: IContactRepository =
+  new PrismaContactRepository(prisma)
 const userRepository: IUserRepository = new PrismaUserRepository(prisma)
-const recommendationRepository: IRecommendationRepository = new PrismaRecommendationRepository(
-  prisma,
-)
+
+const recommendationRepository: IRecommendationRepository =
+  new PrismaRecommendationRepository(prisma)
+
 const recommendationAuthorRepository: IRecommendationAuthorRepository =
   new PrismaRecommendationAuthorRepository(prisma)
-const llmChatLogRepository = new PrismaLlmChatLogRepository(prisma)
-const mediaRepository: IMediaRepository = new PrismaMediaRepository(prisma)
-const emailService = process.env.RESEND_API_KEY ? new ResendEmailService() : new NodemailerEmailService()
+
+const llmChatLogRepository =
+  new PrismaLlmChatLogRepository(prisma)
+
+const mediaRepository: IMediaRepository =
+  new PrismaMediaRepository(prisma)
+
+const emailService = process.env.RESEND_API_KEY
+  ? new ResendEmailService()
+  : new NodemailerEmailService()
+
 const storageService: IStorageService = createStorage()
 
 // Application services
@@ -85,12 +103,18 @@ const projectsService = new ProjectsService(projectRepository)
 const contactService = new ContactService(contactRepository, emailService)
 const usersService = new UsersService(userRepository)
 const authService = new AuthService(userRepository, emailService)
-const githubOAuthService = new GithubOAuthService(recommendationAuthorRepository)
-const linkedinOAuthService = new LinkedInOAuthService(recommendationAuthorRepository)
+
+const githubOAuthService =
+  new GithubOAuthService(recommendationAuthorRepository)
+
+const linkedinOAuthService =
+  new LinkedInOAuthService(recommendationAuthorRepository)
+
 const recommendationService = new RecommendationService(
   recommendationRepository,
   recommendationAuthorRepository,
 )
+
 const llmChatService = new LlmChatService(llmChatLogRepository)
 const mediaService = new MediaService(storageService, mediaRepository)
 
@@ -99,8 +123,16 @@ const postsController = new PostsController(postsService)
 const projectsController = new ProjectsController(projectsService)
 const contactController = new ContactController(contactService)
 const usersController = new UsersController(usersService)
-const authController = new AuthController(authService, githubOAuthService, linkedinOAuthService)
-const recommendationController = new RecommendationController(recommendationService)
+
+const authController = new AuthController(
+  authService,
+  githubOAuthService,
+  linkedinOAuthService,
+)
+
+const recommendationController =
+  new RecommendationController(recommendationService)
+
 const askController = new AskController(llmChatService)
 const mediaController = new MediaController(mediaService)
 
@@ -116,7 +148,10 @@ const app = composeApp({
 })
 
 const port = process.env.PORT ? Number(process.env.PORT) : 3000
-const server = app.listen(port, () => console.log(`API listening on port ${port}`))
+
+const server = app.listen(port, () =>
+  console.log(`API listening on port ${port}`),
+)
 
 const shutdown = async () => {
   server.close()
