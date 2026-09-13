@@ -10,7 +10,7 @@
     }
   },
   "scripts": {
-    "build": "prisma generate && tsc && node scripts/copy-prisma-client.js",
+    "build": "prisma generate && tsc",
     "db:generate": "prisma generate",
     "db:migrate": "prisma migrate dev",
     "db:deploy": "prisma migrate deploy",

@@ -37,7 +37,7 @@ const TopBar = () => {
   const onRecommendations = pathname.startsWith('/recommendations')
   const onAbout = pathname === '/about'
   const onResume = pathname === '/MohammedZeeshan__Resume.pdf'
-  const onSubpage = onBlog || onRecommendations || (onAbout && pathname !== '/') || onResume
+  const onSubpage = onBlog || onRecommendations || onAbout || onResume
   const sectionActive = useHighlightActiveSection(onSubpage ? [] : sectionIds)
   const [menuOpen, setMenuOpen] = useState(false)
   const closeMenu = () => setMenuOpen(false)
