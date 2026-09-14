@@ -9,8 +9,8 @@ const apiRoot = path.resolve(__dirname, '..')
 const root = path.resolve(apiRoot, '../..')
 
 await build({
-  entryPoints: [path.join(apiRoot, 'dist/server.js')],
-  outfile: path.join(apiRoot, 'dist/bundle.js'),
+  entryPoints: [path.join(apiRoot, 'server.ts')],
+  outfile: path.join(apiRoot, 'dist', 'bundle.cjs'),
   bundle: true,
   platform: 'node',
   format: 'cjs',
@@ -24,4 +24,7 @@ await build({
   logLevel: 'info',
 })
 
-console.log('API bundle created:', path.join(apiRoot, 'dist/bundle.js'))
+console.log(
+  'API bundle created:',
+  path.join(apiRoot, 'dist', 'bundle.cjs'),
+)
