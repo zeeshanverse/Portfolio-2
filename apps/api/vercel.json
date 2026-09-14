@@ -3,11 +3,7 @@
   "framework": "express",
   "functions": {
     "server.ts": {
-      "includeFiles": [
-        "../../packages/**",
-        "../../node_modules/@portfolio/db/**",
-        "../../node_modules/@portfolio/shared/**"
-      ]
+      "includeFiles": "../../packages/**"
     }
   }
 }
