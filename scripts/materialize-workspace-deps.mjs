@@ -5,13 +5,14 @@ import { fileURLToPath } from 'node:url'
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 const rootDir = path.resolve(__dirname, '..')
+const apiDir = path.join(rootDir, 'apps', 'api')
 
 const workspacePackages = [
   {
     name: '@portfolio/db',
     source: path.join(rootDir, 'packages', 'db'),
     destination: path.join(
-      rootDir,
+      apiDir,
       'node_modules',
       '@portfolio',
       'db',
@@ -21,7 +22,7 @@ const workspacePackages = [
     name: '@portfolio/shared',
     source: path.join(rootDir, 'packages', 'shared'),
     destination: path.join(
-      rootDir,
+      apiDir,
       'node_modules',
       '@portfolio',
       'shared',
@@ -47,15 +48,20 @@ async function materializePackage({ name, source, destination }) {
     const stat = await fs.lstat(destination)
 
     if (stat.isSymbolicLink()) {
-      console.log(`Replacing workspace symlink: ${name}`)
-      await fs.rm(destination, { recursive: true, force: true })
+      console.log(`Removing workspace symlink: ${name}`)
     } else {
-      console.log(`Replacing existing workspace directory: ${name}`)
-      await fs.rm(destination, { recursive: true, force: true })
+      console.log(`Replacing existing workspace package: ${name}`)
     }
+
+    await fs.rm(destination, {
+      recursive: true,
+      force: true,
+    })
   }
 
-  await fs.mkdir(path.dirname(destination), { recursive: true })
+  await fs.mkdir(path.dirname(destination), {
+    recursive: true,
+  })
 
   await fs.cp(source, destination, {
     recursive: true,
