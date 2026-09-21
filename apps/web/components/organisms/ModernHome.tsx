@@ -63,6 +63,17 @@ const stack = [
   ['Git / GitHub', 'Workflow'],
 ]
 
+const certifications = [
+  {
+    title: 'Java Spring Framework, Spring Boot, Spring AI – Gen AI',
+    provider: 'Udemy',
+    year: '2026',
+    skills: ['Java', 'Spring Framework', 'Spring Boot', 'Spring AI'],
+    credential:
+      'https://www.udemy.com/certificate/UC-146bd6a6-6729-4224-85a1-d5fa78e8cc07/',
+  },
+]
+
 function ContactForm() {
   const [sent, setSent] = useState(false)
   const [loading, setLoading] = useState(false)
@@ -181,9 +192,59 @@ export default function ModernHome() {
         <div className="stack-grid">{stack.map(([name, desc], index) => <div className="stack-item" key={name}><span>0{index + 1}</span><div><strong>{name}</strong><small>{desc}</small></div><b>↗</b></div>)}</div>
       </section>
 
+      <section className="modern-section certifications-section" id="certifications">
+  <div className="section-intro">
+    <div>
+      <p className="section-label">03 / CERTIFICATIONS</p>
+      <h2>Credentials that support my stack.</h2>
+    </div>
+
+    <p>
+      Focused learning in the technologies I use to build backend and
+      full-stack applications.
+    </p>
+  </div>
+
+  <div className="certification-grid">
+    {certifications.map((cert) => (
+      <article className="certification-card" key={cert.title}>
+        <div className="certification-top">
+          <span>{cert.provider.toUpperCase()}</span>
+          <span>{cert.year}</span>
+        </div>
+
+        <div className="certification-body">
+          <div className="certification-mark">U</div>
+
+          <div className="certification-content">
+            <p className="certification-type">COURSE COMPLETION</p>
+
+            <h3>{cert.title}</h3>
+
+            <div className="tag-row">
+              {cert.skills.map((skill) => (
+                <span key={skill}>{skill}</span>
+              ))}
+            </div>
+
+            <a
+              href={cert.credential}
+              target="_blank"
+              rel="noreferrer"
+              className="certification-link"
+            >
+              View Certificate <span>↗</span>
+            </a>
+          </div>
+        </div>
+      </article>
+    ))}
+  </div>
+</section>
+
       <section className="modern-section build-section" id="about">
         <div className="build-card">
-          <div><p className="section-label">03 / HOW I WORK</p><h2>Learn. Build. Improve.</h2></div>
+          <div><p className="section-label">04 / HOW I WORK</p><h2>Learn. Build. Improve.</h2></div>
           <div className="principles">
             <div><span>01</span><h3>Understand</h3><p>Break the problem down before writing code. Define the data, API and user flow first.</p></div>
             <div><span>02</span><h3>Build</h3><p>Prefer simple, maintainable implementations that can grow without unnecessary complexity.</p></div>
@@ -197,7 +258,7 @@ export default function ModernHome() {
 
         {/* LEFT — heading */}
         <div className="contact-copy">
-          <p className="section-label">04 / LET&apos;S TALK</p>
+          <p className="section-label">05 / LET&apos;S TALK</p>
 
           <h2>Start a conversation.</h2>
 
