@@ -14,7 +14,7 @@ const projects = [
   {
     slug: 'ai-crew',
     title: 'AI-Crew',
-    type: 'AI',
+    type: 'In Progress',
     year: '2026',
     description:
       'An AI-powered company operations platform exploring specialized AI agents for business workflows, project management, research and engineering tasks.',
@@ -88,10 +88,10 @@ const projects = [
 
 const filters = [
   'All',
-  'AI',
   'Backend',
   'Full Stack',
   'Computer Vision',
+  'Voice AI',
   'In Progress',
 ]
 const stack = [
