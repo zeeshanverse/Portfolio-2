@@ -27,11 +27,115 @@ function toProjectData(project: ProjectDetailResponse, index: number): ProjectDa
 }
 
 const FALLBACK_PROJECTS: ProjectData[] = [
-  { num: '01', slug: 'smart-attendance-system', title: 'ATTEND AI (Smart Attendance System)', year: '2025', role: 'Final Year Project · Python / Flask / Computer Vision', desc: 'A final-year facial-recognition attendance system that detects and recognizes faces in real time, records timestamped attendance and keeps attendance data organized for management.', tags: ['Python', 'Flask', 'OpenCV', 'face_recognition', 'SQLite'], links: [{ label: 'live', href: 'https://smart-attendance-system-tvmk.onrender.com/api/auth/demo' }, { label: 'repo', href: 'https://github.com/zeeshanverse/smart-attendance-system' }], litTags: [0,1] },
-  { num: '02', slug: 'mymeal', title: 'MyMeal', year: '2024', role: 'Web Application', desc: 'A food-ordering web application with menu browsing, cart management and order placement, built with Flask and JavaScript.', tags: ['Flask', 'JavaScript', 'HTML', 'CSS'], links: [{ label: 'live', href: 'https://mymeal.onrender.com' }, { label: 'repo', href: 'https://github.com/zeeshanverse/project-E-commerce-Website-MyMeal-' }], litTags: [0] },
-  { num: '03', slug: 'banking-system', title: 'Banking System', year: '2026', role: 'Java / Spring Boot', desc: 'A backend banking system with JWT authentication, account management, deposits, withdrawals, money transfers and transaction reporting using PostgreSQL, JPA and JDBC.', tags: ['Java', 'Spring Boot', 'PostgreSQL', 'JPA', 'JDBC', 'JWT'], links: [{ label: 'repo', href: 'https://github.com/zeeshanverse/banking-system-springboot' }], litTags: [0,1] },
-  { num: '04', slug: 'jobtrack', title: 'JobTrack', year: '2026', role: 'Upcoming · In progress', desc: 'A job application tracker for recording companies, roles, application status, job URLs and application statistics.', tags: ['HTML', 'CSS', 'JavaScript'], links: [{ label: 'repo', href: 'https://github.com/zeeshanverse/job-tracker' }], litTags: [0] },
+  {
+    num: '01',
+    slug: 'ai-crew',
+    title: 'AI-Crew',
+    year: '2026',
+    role: 'In Progress · AI / Full Stack',
+    desc: 'An AI-powered company operations platform exploring specialized AI agents for business workflows, project management, research and engineering tasks.',
+    tags: ['AI', 'React', 'Java', 'Spring Boot', 'Docker'],
+    links: [
+      {
+        label: 'repo',
+        href: 'https://github.com/zeeshanverse/AI-Crew',
+      },
+    ],
+    litTags: [0, 1],
+  },
 
+  {
+    num: '02',
+    slug: 'voxflow-ai',
+    title: 'VoxFlow AI',
+    year: '2026',
+    role: 'Full-Stack Voice AI · Java / Spring Boot / React',
+    desc: 'A full-stack voice AI and interview assistant combining speech-to-text, LLM-powered conversations, text-to-speech, authentication, persistence and interview analytics.',
+    tags: ['Java', 'Spring Boot', 'React', 'AI', 'PostgreSQL', 'Docker'],
+    links: [
+      {
+        label: 'repo',
+        href: 'https://github.com/zeeshanverse/VoxFlow-AI',
+      },
+    ],
+    litTags: [0, 1],
+  },
+
+  {
+    num: '03',
+    slug: 'banking-system',
+    title: 'Banking System',
+    year: '2026',
+    role: 'Backend Engineering · Java / Spring Boot',
+    desc: 'A secure Java and Spring Boot banking backend with JWT authentication, account management, transactions and PostgreSQL persistence.',
+    tags: ['Java', 'Spring Boot', 'PostgreSQL', 'JPA', 'JDBC', 'JWT'],
+    links: [
+      {
+        label: 'repo',
+        href: 'https://github.com/zeeshanverse/banking-system-springboot',
+      },
+    ],
+    litTags: [0, 1],
+  },
+
+  {
+    num: '04',
+    slug: 'smart-attendance-system',
+    title: 'ATTEND AI (Smart Attendance System)',
+    year: '2025',
+    role: 'Final Year Project · Python / Flask / Computer Vision',
+    desc: 'A final-year facial-recognition attendance system that detects and recognizes faces in real time, records timestamped attendance and keeps attendance data organized.',
+    tags: ['Python', 'Flask', 'OpenCV', 'face_recognition', 'SQLite'],
+    links: [
+      {
+        label: 'live',
+        href: 'https://smart-attendance-system-tvmk.onrender.com/api/auth/demo',
+      },
+      {
+        label: 'repo',
+        href: 'https://github.com/zeeshanverse/smart-attendance-system',
+      },
+    ],
+    litTags: [0, 1],
+  },
+
+  {
+    num: '05',
+    slug: 'jobtrack',
+    title: 'JobTrack',
+    year: '2026',
+    role: 'In Progress · HTML / CSS / JavaScript',
+    desc: 'An in-progress job application tracker for recording companies, roles, application status, job URLs and application statistics.',
+    tags: ['HTML', 'CSS', 'JavaScript'],
+    links: [
+      {
+        label: 'repo',
+        href: 'https://github.com/zeeshanverse/job-tracker',
+      },
+    ],
+    litTags: [0],
+  },
+
+  {
+    num: '06',
+    slug: 'mymeal',
+    title: 'MyMeal',
+    year: '2024',
+    role: 'Full-Stack Web Application · Flask / JavaScript',
+    desc: 'A food-ordering web application providing menu browsing, cart management and order placement through a complete frontend-to-backend workflow.',
+    tags: ['Flask', 'JavaScript', 'HTML', 'CSS'],
+    links: [
+      {
+        label: 'live',
+        href: 'https://mymeal.onrender.com',
+      },
+      {
+        label: 'repo',
+        href: 'https://github.com/zeeshanverse/project-E-commerce-Website-MyMeal-',
+      },
+    ],
+    litTags: [0],
+  },
 ]
 
 const Projects = async () => {

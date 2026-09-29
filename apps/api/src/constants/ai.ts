@@ -80,8 +80,12 @@ CONVERSATION STYLE
 2. MyMeal — food-ordering web application with menu browsing, cart management and order placement using Flask and JavaScript. Live demo: https://mymeal.onrender.com. Repository: https://github.com/zeeshanverse/project-E-commerce-Website-MyMeal-
 3. Banking System — Java/Spring Boot backend banking application with JWT authentication, account management, deposits, withdrawals, transfers and transaction reporting using PostgreSQL, JPA and JDBC. Repository: https://github.com/zeeshanverse/banking-system-springboot
 
-# Upcoming project
-JobTrack — a job application tracker currently in progress. Current repository: https://github.com/zeeshanverse/job-tracker. Current features include adding job applications, tracking company and role, tracking application status, storing job URLs and viewing application statistics. Current stack: HTML, CSS and JavaScript. Planned work includes local storage, filtering, editing/deleting applications, then a React frontend and Spring Boot backend. Do not describe it as completed or claim a live demo unless one is provided.
+# Current projects
+1. AI-Crew — AI-powered company operations platform currently in progress, exploring specialized AI agents for business workflows, project management, research and engineering tasks. Stack direction: AI, React, Java, Spring Boot and Docker. Repository: https://github.com/zeeshanverse/AI-Crew
+
+2. VoxFlow AI — full-stack voice AI and interview assistant currently being developed with React, Spring Boot, PostgreSQL, JWT, AssemblyAI, Gemini, ElevenLabs and Docker. It combines speech-to-text, LLM-powered conversations, text-to-speech, authentication, persistent conversations and interview analytics. Repository: https://github.com/zeeshanverse/VoxFlow-AI
+
+3. JobTrack — job application tracker currently in progress. Current repository: https://github.com/zeeshanverse/job-tracker. Current features include adding job applications, tracking company and role, tracking application status, storing job URLs and viewing application statistics. Current stack: HTML, CSS and JavaScript. Planned work includes local storage, filtering, editing/deleting applications, then a React frontend and Spring Boot backend.
 
 # Online profiles
 - GitHub: https://github.com/zeeshanverse
@@ -115,11 +119,26 @@ export function getOfflineAssistantResponse(prompt: string): string | null {
   }
 
   if (q.includes('rest api') || q.includes('rest apis')) {
-    return `A REST API is a way for applications to communicate over HTTP. For example, a frontend can send GET /users to retrieve users, POST /users to create one, PUT/PATCH to update one, and DELETE /users/123 to remove one. The server returns data—commonly JSON—and an HTTP status such as 200, 201 or 404.`
+    return `Mohammed Zeeshan currently has six featured projects:
+
+    • AI-Crew — AI-powered company operations platform; currently in progress.
+    • VoxFlow AI — full-stack voice AI and interview assistant.
+    • Banking System — Java/Spring Boot backend with JWT, PostgreSQL, JPA and JDBC.
+    • ATTEND AI — facial-recognition attendance system using Python, Flask and OpenCV.
+    • JobTrack — job application tracker; currently in progress.
+    • MyMeal — food-ordering web application using Flask and JavaScript.`
   }
 
   if (q.includes('java interview question')) {
     return `Java interview question: What is the difference between == and .equals() in Java?\n\nA strong answer: == compares primitive values directly, but for objects it compares references. .equals() is used for logical/content equality when the class implements it appropriately. For example, two different String objects can contain the same text and be .equals() while == may be false.`
+  }
+
+  if (q.includes('ai-crew') || q.includes('ai crew')) {
+    return `AI-Crew is an AI-powered company operations platform currently in progress. It explores specialized AI agents for business workflows, project management, research and engineering tasks, with a full-stack direction using AI, React, Java, Spring Boot and Docker.`
+  }
+
+  if (q.includes('voxflow')) {
+    return `VoxFlow AI is a full-stack voice AI and interview assistant currently being developed with React, Spring Boot, PostgreSQL, JWT, AssemblyAI, Gemini, ElevenLabs and Docker. It combines speech-to-text, LLM-powered conversations, text-to-speech, authentication, persistent conversations and interview analytics.`
   }
 
   if (q.includes('banking system')) {

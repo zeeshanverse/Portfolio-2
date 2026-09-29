@@ -12,46 +12,88 @@ import './ModernHome.css'
 
 const projects = [
   {
+    slug: 'ai-crew',
+    title: 'AI-Crew',
+    type: 'AI',
+    year: '2026',
+    description:
+      'An AI-powered company operations platform exploring specialized AI agents for business workflows, project management, research and engineering tasks.',
+    stack: ['AI', 'React', 'Java', 'Spring Boot', 'Docker'],
+    repo: 'https://github.com/zeeshanverse/AI-Crew',
+    featured: true,
+  },
+
+  {
+    slug: 'voxflow-ai',
+    title: 'VoxFlow AI',
+    type: 'AI',
+    year: '2026',
+    description:
+      'A full-stack voice AI and interview assistant combining speech-to-text, LLM conversations, text-to-speech, authentication, persistence and interview analytics.',
+    stack: ['Java', 'Spring Boot', 'React', 'PostgreSQL', 'AI'],
+    repo: 'https://github.com/zeeshanverse/VoxFlow-AI',
+    featured: true,
+  },
+
+  {
     slug: 'banking-system',
     title: 'Banking System',
     type: 'Backend',
     year: '2026',
-    description: 'A production-minded banking API with JWT security, account management, transfers, transactions and PostgreSQL persistence.',
+    description:
+      'A secure Java and Spring Boot banking backend with JWT security, account management, transfers, transactions and PostgreSQL persistence.',
     stack: ['Java', 'Spring Boot', 'PostgreSQL', 'JPA', 'JWT'],
     repo: 'https://github.com/zeeshanverse/banking-system-springboot',
     featured: true,
   },
+
   {
     slug: 'smart-attendance-system',
     title: 'Attend AI',
     type: 'Computer Vision',
     year: '2025',
-    description: 'Real-time facial-recognition attendance system that records timestamped attendance and keeps management data organized.',
+    description:
+      'A real-time facial-recognition attendance system that records timestamped attendance and keeps management data organized.',
     stack: ['Python', 'Flask', 'OpenCV', 'SQLite'],
     repo: 'https://github.com/zeeshanverse/smart-attendance-system',
     live: 'https://smart-attendance-system-tvmk.onrender.com/api/auth/demo',
     featured: true,
   },
+
+  {
+    slug: 'jobtrack',
+    title: 'JobTrack',
+    type: 'In Progress',
+    year: '2026',
+    description:
+      'An in-progress job application tracker for keeping companies, roles, statuses, job links and application statistics organized.',
+    stack: ['HTML', 'CSS', 'JavaScript'],
+    repo: 'https://github.com/zeeshanverse/job-tracker',
+    featured: true,
+  },
+
   {
     slug: 'mymeal',
     title: 'MyMeal',
     type: 'Full Stack',
     year: '2024',
-    description: 'A food-ordering web application with menu discovery, cart management and order placement built around a clean user flow.',
+    description:
+      'A food-ordering web application with menu browsing, cart management and order placement built around a complete user flow.',
     stack: ['Flask', 'JavaScript', 'HTML', 'CSS'],
     repo: 'https://github.com/zeeshanverse/project-E-commerce-Website-MyMeal-',
     live: 'https://mymeal.onrender.com',
-    featured: false,
-  },
-  {
-    slug: 'jobtrack', title: 'JobTrack', type: 'In Progress', year: '2026',
-    description: 'A job application tracker I am actively building around a real problem: keeping companies, roles, statuses and application links organized.',
-    stack: ['HTML', 'CSS', 'JavaScript'], repo: 'https://github.com/zeeshanverse/job-tracker', featured: false,
+    featured: true,
   },
 ]
 
-const filters = ['All', 'Backend', 'Full Stack', 'Computer Vision', 'In Progress']
-
+const filters = [
+  'All',
+  'AI',
+  'Backend',
+  'Full Stack',
+  'Computer Vision',
+  'In Progress',
+]
 const stack = [
   ['Java', 'Core language'],
   ['Spring Boot', 'Backend framework'],
@@ -137,8 +179,10 @@ export default function ModernHome() {
               <span className="code-muted">  void</span> <span className="code-accent">build</span>() {'{'}{`\n`}
               {`    `}<span className="code-comment">// turn ideas into useful software</span>{`\n`}
               {`  }\n}`}</code></pre>
-            <div className="terminal-line"><span>●</span> currently building <b>JobTrack</b></div>
-          </div>
+              <div className="terminal-line">
+                <span>●</span> currently building <b>AI-Crew</b> + <b>JobTrack</b>
+              </div>
+            </div>
           <div className="floating-chip chip-one">REST APIs</div>
           <div className="floating-chip chip-two">PostgreSQL</div>
           <div className="floating-chip chip-three">Docker</div>
@@ -146,7 +190,7 @@ export default function ModernHome() {
       </section>
 
       <section className="proof-strip" aria-label="portfolio highlights">
-        <div><strong>03+</strong><span>featured projects</span></div>
+        <div><strong>06</strong><span>featured projects</span></div>
         <div><strong>Java</strong><span>primary language</span></div>
         <div><strong>Spring</strong><span>backend ecosystem</span></div>
         <div><strong>DSA</strong><span>actively sharpening</span></div>
