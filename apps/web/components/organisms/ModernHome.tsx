@@ -216,7 +216,7 @@ export default function ModernHome() {
               1,300+
             </a>
           </strong>
-          <span>DSA problems solved</span>
+          <span>DSA problems solved on multiple coding platforms</span>
         </div>
 
         <div>
