@@ -190,10 +190,44 @@ export default function ModernHome() {
       </section>
 
       <section className="proof-strip" aria-label="portfolio highlights">
-        <div><strong>06</strong><span>featured projects</span></div>
-        <div><strong>Java</strong><span>primary language</span></div>
-        <div><strong>Spring</strong><span>backend ecosystem</span></div>
-        <div><strong>DSA</strong><span>actively sharpening</span></div>
+        <div>
+          <strong>06</strong>
+          <span>featured projects</span>
+        </div>
+
+        <div>
+          <strong>Java</strong>
+          <span>primary language</span>
+        </div>
+
+        <div>
+          <strong>Spring</strong>
+          <span>backend ecosystem</span>
+        </div>
+
+        <div>
+          <strong>
+            <a
+              href="https://codolio.com/profile/learningzeeshan"
+              target="_blank"
+              rel="noreferrer"
+              style={{ color: 'inherit', textDecoration: 'none' }}
+            >
+              1,300+
+            </a>
+          </strong>
+          <span>DSA problems solved</span>
+        </div>
+
+        <div>
+          <strong>1500</strong>
+          <span>LeetCode contest rating</span>
+        </div>
+
+        <div>
+          <strong>DSA</strong>
+          <span>actively sharpening</span>
+        </div>
       </section>
 
       <section className="modern-section" id="projects">
