@@ -110,9 +110,17 @@ const certifications = [
     title: 'Java Spring Framework, Spring Boot, Spring AI – Gen AI',
     provider: 'Udemy',
     year: '2026',
-    skills: ['Java', 'Spring Framework', 'Spring Boot', 'Spring AI'],
+    skills: ['Java', 'Spring Framework', 'Spring Boot', 'Spring AI', 'Docker' , 'Microservices'],
     credential:
       'https://www.udemy.com/certificate/UC-146bd6a6-6729-4224-85a1-d5fa78e8cc07/',
+  },
+  {
+    title: 'Agentic AI Engineering with LangChain and LangGraph',
+    provider: 'Udemy',
+    year: '2026',
+    skills: ['LangChain', 'LangGraph', 'AI Agents', 'Agentic AI', 'RAG', 'ReAct', 'Tool Calling', 'MCP', 'Multi-Agent Systems'],
+    credential:
+      'https://www.udemy.com/certificate/UC-49855e48-59c3-4f11-9ccd-4f459bd891db/',
   },
 ]
 
