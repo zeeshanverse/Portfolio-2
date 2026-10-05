@@ -14,7 +14,7 @@ const projects = [
   {
     slug: 'ai-crew',
     title: 'AI-Crew',
-    type: 'In Progress',
+    type: 'Multi Agent System',
     year: '2026',
     description:
       'An AI-powered company operations platform exploring specialized AI agents for business workflows, project management, research and engineering tasks.',
