@@ -20,6 +20,7 @@ const projects = [
       'An AI-powered company operations platform exploring specialized AI agents for business workflows, project management, research and engineering tasks.',
     stack: ['AI', 'React', 'Java', 'Spring Boot', 'Docker'],
     repo: 'https://github.com/zeeshanverse/AI-Crew',
+    live: 'https://youtu.be/vuon2fvFuXo?si=9jpIOOzOxxhI9Z5U',
     featured: true,
   },
 
@@ -32,6 +33,7 @@ const projects = [
       'A full-stack voice AI and interview assistant combining speech-to-text, LLM conversations, text-to-speech, authentication, persistence and interview analytics.',
     stack: ['Java', 'Spring Boot', 'React', 'PostgreSQL', 'AI'],
     repo: 'https://github.com/zeeshanverse/VoxFlow-AI',
+    live: 'https://vox-flow-ai-sand.vercel.app',
     featured: true,
   },
 
