@@ -32,7 +32,7 @@ const FALLBACK_PROJECTS: ProjectData[] = [
     slug: 'ai-crew',
     title: 'AI-Crew',
     year: '2026',
-    role: 'In Progress · AI / Full Stack',
+    role: 'Completed · AI / Full Stack',
     desc: 'An AI-powered company operations platform exploring specialized AI agents for business workflows, project management, research and engineering tasks.',
     tags: ['AI', 'React', 'Java', 'Spring Boot', 'Docker'],
     links: [
@@ -56,6 +56,10 @@ const FALLBACK_PROJECTS: ProjectData[] = [
       {
         label: 'repo',
         href: 'https://github.com/zeeshanverse/VoxFlow-AI',
+      },
+      {
+        label: 'live',
+        href: 'https://youtu.be/vuon2fvFuXo',
       },
     ],
     litTags: [0, 1],
