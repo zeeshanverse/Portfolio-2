@@ -163,8 +163,6 @@ async function main() {
         'Java, Spring Boot, Spring Security, React, Vite, PostgreSQL, JWT, AssemblyAI, Gemini, ElevenLabs and Docker.\n\n' +
         '### Live Demo\n\n' +
         '🌐 [Open the live VoxFlow application](https://vox-flow-ai-sand.vercel.app/)\n\n' +
-        '### YouTube Demo\n\n' +
-        '🎥 [Watch the VoxFlow demo on YouTube](https://youtu.be/vuon2fyFuXo?si=7buXj2HkODWAkUDK)\n\n' +
         '### Repository\n\n' +
         '[GitHub](https://github.com/zeeshanverse/VoxFlow-AI)',
 
