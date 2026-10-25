@@ -6,7 +6,8 @@ const ProjectRow = ({ project }: { project: ProjectDetailResponse }) => {
   const year = project.startedAt
     ? new Date(project.startedAt).getFullYear()
     : new Date(project.createdAt).getFullYear()
-  const endLabel = project.endedAt ? 'completed' : 'ongoing'
+
+  const endLabel = 'completed'
 
   return (
     <Link
@@ -25,9 +26,11 @@ const ProjectRow = ({ project }: { project: ProjectDetailResponse }) => {
         <h3 className="font-[family-name:var(--font-mono)] font-medium text-[clamp(18px,2vw,22px)] tracking-[-0.02em] text-[var(--text-bright)] m-0 mb-1.5 transition-colors duration-200 group-hover:text-[var(--accent)]">
           {project.title}
         </h3>
+
         <p className="text-[14px] text-[var(--text)] m-0 mb-3 leading-[1.55] max-w-[70ch] text-pretty">
           {project.shortDescription}
         </p>
+
         <div className="flex gap-2 flex-wrap items-center">
           {project.tags.map((t) => (
             <Tag key={t.id} label={`#${t.label}`} />
@@ -36,7 +39,11 @@ const ProjectRow = ({ project }: { project: ProjectDetailResponse }) => {
       </div>
 
       <div className="font-[family-name:var(--font-mono)] text-[12px] text-[var(--text-dim)] whitespace-nowrap text-right self-center max-[760px]:text-left">
-        {project.role && <span className="text-[var(--accent)] block">{project.role}</span>}
+        {project.role && (
+          <span className="text-[var(--accent)] block">
+            {project.role}
+          </span>
+        )}
         <span>{endLabel}</span>
       </div>
     </Link>

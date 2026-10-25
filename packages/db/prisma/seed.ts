@@ -63,7 +63,9 @@ async function main() {
   let adminId: string | undefined
 
   if (!adminEmail || !adminPassword) {
-    console.warn('SEED_ADMIN_EMAIL or SEED_ADMIN_PASSWORD not set — skipping admin user and demo post')
+    console.warn(
+      'SEED_ADMIN_EMAIL or SEED_ADMIN_PASSWORD not set — skipping admin user and demo post',
+    )
   } else {
     const bcrypt = await import('bcryptjs')
     const passwordHash = await bcrypt.hash(adminPassword, 12)
@@ -80,295 +82,300 @@ async function main() {
 
   // Projects are seeded independently of the optional admin account.
   const projects = [
-  {
-    slug: 'ai-crew',
-    title: 'AI-Crew',
-    role: 'Comleted · AI / Full Stack',
-    shortDescription:
-      'An AI-powered company operations platform exploring specialized AI agents for business workflows, project management, research and engineering tasks.',
-    tagline: 'Completed',
+    {
+      slug: 'ai-crew',
+      title: 'AI-Crew',
+      role: 'AI / Full Stack · React / Java / Spring Boot',
+      shortDescription:
+        'An AI-powered company operations platform connecting specialized AI agents for business workflows, project management, research and engineering tasks.',
+      tagline: 'AI Company Operations Platform',
 
-    descriptionMd:
-      '## AI-Crew\n\n' +
-      'AI-Crew is an AI-powered company operations platform currently under active development.\n\n' +
-      'The project explores how specialized AI agents can work together to support different areas of a software-driven company while keeping workflows, actions and outputs organized.\n\n' +
-      '### What it aims to do\n\n' +
-      '- Provides specialized AI agents for different responsibilities.\n' +
-      '- Supports company and business workflows.\n' +
-      '- Assists with project and task management.\n' +
-      '- Supports AI-assisted research.\n' +
-      '- Assists with engineering-oriented workflows.\n' +
-      '- Maintains persistent application data.\n' +
-      '- Tracks AI actions and workflow activity.\n' +
-      '- Connects multiple AI capabilities through a unified application.\n\n' +
-      '### Architecture direction\n\n' +
-      'Frontend → Backend → AI Agents → Data / Services\n\n' +
-      '### Project status\n\n' +
-      'AI-Crew is currently **in progress** and is actively evolving rather than being presented as a finished production platform.\n\n' +
-      '### Technology\n\n' +
-      'AI, React, Java, Spring Boot, Docker and supporting full-stack technologies.\n\n' +
-      '### Repository\n\n' +
-      '[GitHub](https://github.com/zeeshanverse/AI-Crew)',
+      descriptionMd:
+        '## AI-Crew\n\n' +
+        'AI-Crew is an AI-powered company operations platform that connects specialized AI agents to support different areas of a software-driven company while keeping workflows, actions and outputs organized.\n\n' +
+        '### What it does\n\n' +
+        '- Provides specialized AI agents for different responsibilities.\n' +
+        '- Supports company and business workflows.\n' +
+        '- Assists with project and task management.\n' +
+        '- Supports AI-assisted research.\n' +
+        '- Assists with engineering-oriented workflows.\n' +
+        '- Maintains persistent application data.\n' +
+        '- Tracks AI actions and workflow activity.\n' +
+        '- Connects multiple AI capabilities through a unified application.\n\n' +
+        '### Architecture\n\n' +
+        'Frontend → Backend → AI Agents → Data / Services\n\n' +
+        '### Project status\n\n' +
+        'AI-Crew is a completed portfolio project demonstrating the integration of AI agents with a full-stack application architecture.\n\n' +
+        '### Technology\n\n' +
+        'AI, React, Java, Spring Boot, Docker and supporting full-stack technologies.\n\n' +
+        '### Demo\n\n' +
+        '🎥 [Watch the AI-Crew demo on YouTube](https://youtu.be/vuon2fyFuXo?si=7buXj2HkODWAkUDK)\n\n' +
+        'The demo showcases the multi-agent workflow, AI execution, human approval flow and audit trail in action.\n\n' +
+        '### Repository\n\n' +
+        '[GitHub](https://github.com/zeeshanverse/AI-Crew)',
 
-    startedAt: new Date('2026-09-01'),
-    endedAt: null,
+      startedAt: new Date('2026-09-01'),
+      endedAt: new Date('2026-10-14'),
 
-    featured: true,
-    published: true,
-    displayOrder: 0,
+      featured: true,
+      published: true,
+      displayOrder: 0,
 
-    liveUrl: null,
-    repoUrl: 'https://github.com/zeeshanverse/AI-Crew',
+      liveUrl: null,
+      repoUrl: 'https://github.com/zeeshanverse/AI-Crew',
 
-    projectTags: {
-      create: [
-        { tag: { connect: { slug: 'react' } } },
-        { tag: { connect: { slug: 'java' } } },
-        { tag: { connect: { slug: 'ai' } } },
-        { tag: { connect: { slug: 'docker' } } },
-      ],
+      projectTags: {
+        create: [
+          { tag: { connect: { slug: 'react' } } },
+          { tag: { connect: { slug: 'java' } } },
+          { tag: { connect: { slug: 'ai' } } },
+          { tag: { connect: { slug: 'docker' } } },
+        ],
+      },
     },
-  },
 
-  {
-    slug: 'voxflow-ai',
-    title: 'VoxFlow AI',
-    role: 'Full-Stack Voice AI · Java / Spring Boot / React',
-    shortDescription:
-      'A full-stack voice AI and interview assistant combining speech-to-text, LLM-powered conversations, text-to-speech, authentication, persistent conversations and interview analytics.',
-    tagline: 'Voice AI · Interview Assistant',
+    {
+      slug: 'voxflow-ai',
+      title: 'VoxFlow AI',
+      role: 'Full-Stack Voice AI · Java / Spring Boot / React',
+      shortDescription:
+        'A full-stack voice AI and interview assistant combining speech-to-text, LLM-powered conversations, text-to-speech, authentication, persistent conversations and interview analytics.',
+      tagline: 'Voice AI · Interview Assistant',
 
-    descriptionMd:
-      '## VoxFlow AI\n\n' +
-      'VoxFlow AI is a full-stack voice AI and interview assistant designed to combine traditional software engineering with conversational AI and speech technologies.\n\n' +
-      '### What it does\n\n' +
-      '- Converts spoken input into text using speech-to-text services.\n' +
-      '- Processes conversations through LLM-powered assistant logic.\n' +
-      '- Converts assistant responses back into speech.\n' +
-      '- Maintains persistent conversations.\n' +
-      '- Provides authentication and protected application flows.\n' +
-      '- Supports an interview-focused mode.\n' +
-      '- Provides interview analytics and evaluation-oriented workflows.\n' +
-      '- Persists application and conversation data using PostgreSQL.\n\n' +
-      '### Architecture\n\n' +
-      'React frontend → Spring Boot backend → speech / AI providers → PostgreSQL\n\n' +
-      'The backend acts as the central application layer so provider integrations and API credentials remain outside the browser.\n\n' +
-      '### Technology\n\n' +
-      'Java, Spring Boot, Spring Security, React, Vite, PostgreSQL, JWT, AssemblyAI, Gemini, ElevenLabs and Docker.\n\n' +
-      '### Project direction\n\n' +
-      'VoxFlow AI is being developed as a practical AI engineering project rather than a simple API demo, with emphasis on backend architecture, provider abstraction, persistence, authentication and real application workflows.\n\n' +
-      '### Repository\n\n' +
-      '[GitHub](https://github.com/zeeshanverse/VoxFlow-AI)',
+      descriptionMd:
+        '## VoxFlow AI\n\n' +
+        'VoxFlow AI is a full-stack voice AI and interview assistant built to combine traditional software engineering with conversational AI and speech technologies.\n\n' +
+        '### What it does\n\n' +
+        '- Converts spoken input into text using speech-to-text services.\n' +
+        '- Processes conversations through LLM-powered assistant logic.\n' +
+        '- Converts assistant responses back into speech.\n' +
+        '- Maintains persistent conversations.\n' +
+        '- Provides authentication and protected application flows.\n' +
+        '- Supports an interview-focused mode.\n' +
+        '- Provides interview analytics and evaluation-oriented workflows.\n' +
+        '- Persists application and conversation data using PostgreSQL.\n\n' +
+        '### Architecture\n\n' +
+        'React frontend → Spring Boot backend → speech / AI providers → PostgreSQL\n\n' +
+        'The backend acts as the central application layer so provider integrations and API credentials remain outside the browser.\n\n' +
+        '### Engineering focus\n\n' +
+        'VoxFlow AI was built as a practical AI engineering project with emphasis on backend architecture, provider abstraction, persistence, authentication and real application workflows.\n\n' +
+        '### Technology\n\n' +
+        'Java, Spring Boot, Spring Security, React, Vite, PostgreSQL, JWT, AssemblyAI, Gemini, ElevenLabs and Docker.\n\n' +
+        '### Live Demo\n\n' +
+        '🌐 [Open the live VoxFlow application](https://vox-flow-ai-sand.vercel.app/)\n\n' +
+        '### YouTube Demo\n\n' +
+        '🎥 [Watch the VoxFlow demo on YouTube](https://youtu.be/vuon2fyFuXo?si=7buXj2HkODWAkUDK)\n\n' +
+        '### Repository\n\n' +
+        '[GitHub](https://github.com/zeeshanverse/VoxFlow-AI)',
 
-    startedAt: new Date('2026-09-01'),
-    endedAt: null,
+      startedAt: new Date('2026-09-01'),
+      endedAt: new Date('2026-10-14'),
 
-    featured: true,
-    published: true,
-    displayOrder: 1,
+      featured: true,
+      published: true,
+      displayOrder: 1,
 
-    liveUrl: null,
-    repoUrl: 'https://github.com/zeeshanverse/VoxFlow-AI',
+      liveUrl: 'https://vox-flow-ai-sand.vercel.app/',
+      repoUrl: 'https://github.com/zeeshanverse/VoxFlow-AI',
 
-    projectTags: {
-      create: [
-        { tag: { connect: { slug: 'java' } } },
-        { tag: { connect: { slug: 'spring-boot' } } },
-        { tag: { connect: { slug: 'react' } } },
-        { tag: { connect: { slug: 'sql' } } },
-        { tag: { connect: { slug: 'docker' } } },
-        { tag: { connect: { slug: 'ai' } } },
-      ],
+      projectTags: {
+        create: [
+          { tag: { connect: { slug: 'java' } } },
+          { tag: { connect: { slug: 'spring-boot' } } },
+          { tag: { connect: { slug: 'react' } } },
+          { tag: { connect: { slug: 'sql' } } },
+          { tag: { connect: { slug: 'docker' } } },
+          { tag: { connect: { slug: 'ai' } } },
+        ],
+      },
     },
-  },
 
-  {
-    slug: 'banking-system',
-    title: 'Banking System',
-    role: 'Backend Engineering · Java / Spring Boot',
-    shortDescription:
-      'A secure Java and Spring Boot backend banking application featuring JWT authentication, account management, financial transactions, transaction history and PostgreSQL persistence.',
+    {
+      slug: 'banking-system',
+      title: 'Banking System',
+      role: 'Backend Engineering · Java / Spring Boot',
+      shortDescription:
+        'A secure Java and Spring Boot backend banking application featuring JWT authentication, account management, financial transactions, transaction history and PostgreSQL persistence.',
 
-    descriptionMd:
-      '## Banking System\n\n' +
-      'Banking System is a backend-focused financial application built with Java and Spring Boot to model the core workflows of a modern banking platform.\n\n' +
-      '### What it does\n\n' +
-      '- Provides JWT-based authentication and protected API endpoints.\n' +
-      '- Supports user and account management.\n' +
-      '- Handles deposits and withdrawals.\n' +
-      '- Supports account-to-account money transfers.\n' +
-      '- Maintains transaction history and transaction records.\n' +
-      '- Provides transaction-oriented reporting and retrieval.\n' +
-      '- Persists banking data using PostgreSQL.\n' +
-      '- Uses JPA and JDBC for database interaction.\n\n' +
-      '### Architecture\n\n' +
-      'Client → REST API → Controller → Service → Repository → PostgreSQL\n\n' +
-      '### Security\n\n' +
-      'Authentication is handled using JWT-based security with Spring Security.\n\n' +
-      '### Technology\n\n' +
-      'Java, Spring Boot, Spring Security, REST APIs, JWT, PostgreSQL, Spring Data JPA and JDBC.\n\n' +
-      '### Repository\n\n' +
-      '[GitHub](https://github.com/zeeshanverse/banking-system-springboot)',
+      descriptionMd:
+        '## Banking System\n\n' +
+        'Banking System is a backend-focused financial application built with Java and Spring Boot to model the core workflows of a modern banking platform.\n\n' +
+        '### What it does\n\n' +
+        '- Provides JWT-based authentication and protected API endpoints.\n' +
+        '- Supports user and account management.\n' +
+        '- Handles deposits and withdrawals.\n' +
+        '- Supports account-to-account money transfers.\n' +
+        '- Maintains transaction history and transaction records.\n' +
+        '- Provides transaction-oriented reporting and retrieval.\n' +
+        '- Persists banking data using PostgreSQL.\n' +
+        '- Uses JPA and JDBC for database interaction.\n\n' +
+        '### Architecture\n\n' +
+        'Client → REST API → Controller → Service → Repository → PostgreSQL\n\n' +
+        '### Security\n\n' +
+        'Authentication is handled using JWT-based security with Spring Security.\n\n' +
+        '### Technology\n\n' +
+        'Java, Spring Boot, Spring Security, REST APIs, JWT, PostgreSQL, Spring Data JPA and JDBC.\n\n' +
+        '### Repository\n\n' +
+        '[GitHub](https://github.com/zeeshanverse/banking-system-springboot)',
 
-    startedAt: new Date('2026-01-01'),
-    endedAt: new Date('2026-08-31'),
+      startedAt: new Date('2026-01-01'),
+      endedAt: new Date('2026-08-31'),
 
-    featured: true,
-    published: true,
-    displayOrder: 2,
+      featured: true,
+      published: true,
+      displayOrder: 2,
 
-    liveUrl: null,
-    repoUrl:
-      'https://github.com/zeeshanverse/banking-system-springboot',
+      liveUrl: null,
+      repoUrl:
+        'https://github.com/zeeshanverse/banking-system-springboot',
 
-    projectTags: {
-      create: [
-        { tag: { connect: { slug: 'java' } } },
-        { tag: { connect: { slug: 'spring-boot' } } },
-        { tag: { connect: { slug: 'rest-api' } } },
-        { tag: { connect: { slug: 'sql' } } },
-      ],
+      projectTags: {
+        create: [
+          { tag: { connect: { slug: 'java' } } },
+          { tag: { connect: { slug: 'spring-boot' } } },
+          { tag: { connect: { slug: 'rest-api' } } },
+          { tag: { connect: { slug: 'sql' } } },
+        ],
+      },
     },
-  },
 
-  {
-    slug: 'smart-attendance-system',
-    title: 'ATTEND AI (Smart Attendance System)',
-    role: 'Final Year Project · Python / Flask / Computer Vision',
-    shortDescription:
-      'A final-year facial-recognition attendance system that detects and recognizes faces in real time, records timestamped attendance and keeps attendance data organized for management.',
+    {
+      slug: 'smart-attendance-system',
+      title: 'ATTEND AI (Smart Attendance System)',
+      role: 'Final Year Project · Python / Flask / Computer Vision',
+      shortDescription:
+        'A final-year facial-recognition attendance system that detects and recognizes faces in real time, records timestamped attendance and keeps attendance data organized for management.',
 
-    descriptionMd:
-      '## ATTEND AI (Smart Attendance System)\n\n' +
-      '**Final Year Project** — ATTEND AI is a facial-recognition attendance management system developed to automate the process of identifying users and recording attendance. **I led this final-year project**, coordinating the team, task allocation, feature integration, debugging and final delivery.\n\n' +
-      '### What it does\n\n' +
-      '- Captures faces through a camera-based workflow.\n' +
-      '- Detects faces in real time using OpenCV.\n' +
-      '- Recognizes registered users using facial-recognition technology.\n' +
-      '- Records attendance with identity and timestamp.\n' +
-      '- Stores attendance records using SQLite.\n' +
-      '- Provides a Flask-based application layer.\n\n' +
-      '### Architecture\n\n' +
-      'Camera → Face Detection → Face Recognition → Identity Matching → Attendance Recording → Database\n\n' +
-      '### Technology\n\n' +
-      'Python, Flask, OpenCV, face_recognition, dlib, NumPy, SQLite, HTML, CSS and JavaScript.\n\n' +
-      '### Repository\n\n' +
-      '[GitHub](https://github.com/zeeshanverse/smart-attendance-system)\n\n' +
-      '### Live Demo\n\n' +
-      'https://smart-attendance-system-tvmk.onrender.com/api/auth/demo',
+      descriptionMd:
+        '## ATTEND AI (Smart Attendance System)\n\n' +
+        '**Final Year Project** — ATTEND AI is a facial-recognition attendance management system developed to automate the process of identifying users and recording attendance. **I led this final-year project**, coordinating the team, task allocation, feature integration, debugging and final delivery.\n\n' +
+        '### What it does\n\n' +
+        '- Captures faces through a camera-based workflow.\n' +
+        '- Detects faces in real time using OpenCV.\n' +
+        '- Recognizes registered users using facial-recognition technology.\n' +
+        '- Records attendance with identity and timestamp.\n' +
+        '- Stores attendance records using SQLite.\n' +
+        '- Provides a Flask-based application layer.\n\n' +
+        '### Architecture\n\n' +
+        'Camera → Face Detection → Face Recognition → Identity Matching → Attendance Recording → Database\n\n' +
+        '### Technology\n\n' +
+        'Python, Flask, OpenCV, face_recognition, dlib, NumPy, SQLite, HTML, CSS and JavaScript.\n\n' +
+        '### Repository\n\n' +
+        '[GitHub](https://github.com/zeeshanverse/smart-attendance-system)\n\n' +
+        '### Live Demo\n\n' +
+        'https://smart-attendance-system-tvmk.onrender.com/api/auth/demo',
 
-    startedAt: new Date('2025-01-01'),
-    endedAt: new Date('2025-05-31'),
+      startedAt: new Date('2025-01-01'),
+      endedAt: new Date('2025-05-31'),
 
-    featured: true,
-    published: true,
-    displayOrder: 3,
+      featured: true,
+      published: true,
+      displayOrder: 3,
 
-    liveUrl:
-      'https://smart-attendance-system-tvmk.onrender.com/api/auth/demo',
+      liveUrl:
+        'https://smart-attendance-system-tvmk.onrender.com/api/auth/demo',
 
-    repoUrl:
-      'https://github.com/zeeshanverse/smart-attendance-system',
+      repoUrl:
+        'https://github.com/zeeshanverse/smart-attendance-system',
 
-    projectTags: {
-      create: [
-        { tag: { connect: { slug: 'python' } } },
-        { tag: { connect: { slug: 'flask' } } },
-        { tag: { connect: { slug: 'opencv' } } },
-        { tag: { connect: { slug: 'sqlite' } } },
-      ],
+      projectTags: {
+        create: [
+          { tag: { connect: { slug: 'python' } } },
+          { tag: { connect: { slug: 'flask' } } },
+          { tag: { connect: { slug: 'opencv' } } },
+          { tag: { connect: { slug: 'sqlite' } } },
+        ],
+      },
     },
-  },
 
-  {
-    slug: 'jobtrack',
-    title: 'JobTrack',
-    role: 'In Progress · HTML / CSS / JavaScript',
-    shortDescription:
-      'An in-progress job application tracker for recording companies, roles, application status, job URLs and application statistics.',
-    tagline: 'Currently in progress',
+    {
+      slug: 'jobtrack',
+      title: 'JobTrack',
+      role: 'Frontend Web Application · HTML / CSS / JavaScript',
+      shortDescription:
+        'A job application tracker for recording companies, roles, application status, job URLs and application statistics.',
+      tagline: 'Job Application Tracker',
 
-    descriptionMd:
-      '## JobTrack\n\n' +
-      'JobTrack is an in-progress job application tracker built to make an active job search easier to organize.\n\n' +
-      '### Current features\n\n' +
-      '- Add and record job applications.\n' +
-      '- Track companies and roles.\n' +
-      '- Track application status.\n' +
-      '- Store job URLs.\n' +
-      '- View application statistics.\n\n' +
-      '### Current implementation\n\n' +
-      'The current version uses HTML, CSS and JavaScript.\n\n' +
-      '### Planned improvements\n\n' +
-      'The roadmap includes local storage, filtering, editing and deleting applications, followed by a React frontend and Spring Boot backend.\n\n' +
-      '### Project status\n\n' +
-      'JobTrack is currently **in progress** and is being developed incrementally.\n\n' +
-      '### Repository\n\n' +
-      '[GitHub](https://github.com/zeeshanverse/job-tracker)',
+      descriptionMd:
+        '## JobTrack\n\n' +
+        'JobTrack is a job application tracker built to organize and manage an active job search through a simple web application.\n\n' +
+        '### Features\n\n' +
+        '- Add and record job applications.\n' +
+        '- Track companies and roles.\n' +
+        '- Track application status.\n' +
+        '- Store job URLs.\n' +
+        '- View application statistics.\n\n' +
+        '### Implementation\n\n' +
+        'The application uses HTML, CSS and JavaScript to provide the job tracking interface and application workflow.\n\n' +
+        '### Project status\n\n' +
+        'JobTrack is a completed portfolio project demonstrating a practical frontend application for organizing job applications.\n\n' +
+        '### Repository\n\n' +
+        '[GitHub](https://github.com/zeeshanverse/job-tracker)',
 
-    startedAt: new Date('2026-01-01'),
-    endedAt: null,
+      startedAt: new Date('2026-01-01'),
+      endedAt: new Date('2026-10-26'),
 
-    featured: true,
-    published: true,
-    displayOrder: 4,
+      featured: true,
+      published: true,
+      displayOrder: 4,
 
-    liveUrl: null,
-    repoUrl: 'https://github.com/zeeshanverse/job-tracker',
+      liveUrl: null,
+      repoUrl: 'https://github.com/zeeshanverse/job-tracker',
 
-    projectTags: {
-      create: [
-        { tag: { connect: { slug: 'html' } } },
-        { tag: { connect: { slug: 'css' } } },
-        { tag: { connect: { slug: 'javascript' } } },
-      ],
+      projectTags: {
+        create: [
+          { tag: { connect: { slug: 'html' } } },
+          { tag: { connect: { slug: 'css' } } },
+          { tag: { connect: { slug: 'javascript' } } },
+        ],
+      },
     },
-  },
 
-  {
-    slug: 'mymeal',
-    title: 'MyMeal',
-    role: 'Full-Stack Web Application · Flask / JavaScript',
-    shortDescription:
-      'A food-ordering web application providing menu browsing, cart management and order placement through a complete frontend-to-backend workflow.',
+    {
+      slug: 'mymeal',
+      title: 'MyMeal',
+      role: 'Full-Stack Web Application · Flask / JavaScript',
+      shortDescription:
+        'A food-ordering web application providing menu browsing, cart management and order placement through a complete frontend-to-backend workflow.',
 
-    descriptionMd:
-      '## MyMeal\n\n' +
-      'MyMeal is a full-stack food-ordering web application designed around a complete customer ordering workflow.\n\n' +
-      '### What it does\n\n' +
-      '- Displays food items through a browsable menu.\n' +
-      '- Lets users add and manage items in a shopping cart.\n' +
-      '- Supports the order-placement workflow.\n' +
-      '- Connects frontend interactions with Flask backend functionality.\n' +
-      '- Uses database persistence for application data.\n\n' +
-      '### Architecture\n\n' +
-      'Frontend → Flask Backend → Database\n\n' +
-      '### Technology\n\n' +
-      'Python, Flask, HTML5, CSS3, JavaScript and MySQL.\n\n' +
-      '### Repository\n\n' +
-      '[GitHub](https://github.com/zeeshanverse/project-E-commerce-Website-MyMeal-)\n\n' +
-      '### Live Demo\n\n' +
-      'https://mymeal.onrender.com',
+      descriptionMd:
+        '## MyMeal\n\n' +
+        'MyMeal is a full-stack food-ordering web application designed around a complete customer ordering workflow.\n\n' +
+        '### What it does\n\n' +
+        '- Displays food items through a browsable menu.\n' +
+        '- Lets users add and manage items in a shopping cart.\n' +
+        '- Supports the order-placement workflow.\n' +
+        '- Connects frontend interactions with Flask backend functionality.\n' +
+        '- Uses database persistence for application data.\n\n' +
+        '### Architecture\n\n' +
+        'Frontend → Flask Backend → Database\n\n' +
+        '### Technology\n\n' +
+        'Python, Flask, HTML5, CSS3, JavaScript and MySQL.\n\n' +
+        '### Repository\n\n' +
+        '[GitHub](https://github.com/zeeshanverse/project-E-commerce-Website-MyMeal-)\n\n' +
+        '### Live Demo\n\n' +
+        'https://mymeal.onrender.com',
 
-    startedAt: new Date('2024-01-01'),
-    endedAt: new Date('2024-12-31'),
+      startedAt: new Date('2024-01-01'),
+      endedAt: new Date('2024-12-31'),
 
-    featured: true,
-    published: true,
-    displayOrder: 5,
+      featured: true,
+      published: true,
+      displayOrder: 5,
 
-    liveUrl: 'https://mymeal.onrender.com',
-    repoUrl:
-      'https://github.com/zeeshanverse/project-E-commerce-Website-MyMeal-',
+      liveUrl: 'https://mymeal.onrender.com',
 
-    projectTags: {
-      create: [
-        { tag: { connect: { slug: 'flask' } } },
-        { tag: { connect: { slug: 'javascript' } } },
-      ],
+      repoUrl:
+        'https://github.com/zeeshanverse/project-E-commerce-Website-MyMeal-',
+
+      projectTags: {
+        create: [
+          { tag: { connect: { slug: 'flask' } } },
+          { tag: { connect: { slug: 'javascript' } } },
+        ],
+      },
     },
-  },
-]
+  ]
 
   for (const item of projects) {
     const existingProject = await prisma.project.findUnique({
@@ -429,7 +436,6 @@ async function main() {
 
     console.log(`Seeded post: ${post.title}`)
   }
-
 }
 
 main()

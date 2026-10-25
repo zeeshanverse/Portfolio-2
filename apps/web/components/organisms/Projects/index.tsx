@@ -33,8 +33,7 @@ const FALLBACK_PROJECTS: ProjectData[] = [
     title: 'AI-Crew',
     year: '2026',
     role: 'Completed · AI / Full Stack',
-    desc: 'An AI-powered company operations platform exploring specialized AI agents for business workflows, project management, research and engineering tasks.',
-    tags: ['AI', 'React', 'Java', 'Spring Boot', 'Docker'],
+    desc: 'An AI-powered company operations platform connecting specialized AI agents for business workflows, project management, research and engineering tasks.',    tags: ['AI', 'React', 'Java', 'Spring Boot', 'Docker'],
     links: [
       {
         label: 'repo',
@@ -108,9 +107,8 @@ const FALLBACK_PROJECTS: ProjectData[] = [
     slug: 'jobtrack',
     title: 'JobTrack',
     year: '2026',
-    role: 'In Progress · HTML / CSS / JavaScript',
-    desc: 'An in-progress job application tracker for recording companies, roles, application status, job URLs and application statistics.',
-    tags: ['HTML', 'CSS', 'JavaScript'],
+    role: 'Frontend Web Application · HTML / CSS / JavaScript',
+    desc: 'A job application tracker for recording companies, roles, application status, job URLs and application statistics.',    tags: ['HTML', 'CSS', 'JavaScript'],
     links: [
       {
         label: 'repo',

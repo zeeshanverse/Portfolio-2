@@ -50,6 +50,12 @@ AI, React, Java, Spring Boot, Docker and supporting full-stack technologies.
 
 AI-Crew explores practical AI-agent architecture, full-stack application design, workflow orchestration, persistent data and the integration of AI into real software-engineering workflows.
 
+### Demo
+
+🎥 [Watch the AI-Crew live proof on YouTube](https://youtu.be/vuon2fvFuXo?si=7buXj2HkODWAkUDK)
+
+The demo shows the multi-agent workflow, AI execution, human approval flow and audit trail in action.
+
 ### Repository
 
 [GitHub](https://github.com/zeeshanverse/AI-Crew)`,
@@ -138,6 +144,10 @@ Java, Spring Boot, Spring Security, React, Vite, PostgreSQL, JWT, AssemblyAI, Ge
 ### Engineering focus
 
 VoxFlow AI was built as a practical AI engineering project rather than a simple API demo, with emphasis on backend architecture, provider abstraction, persistence, authentication and real application workflows.
+
+### Live Demo
+
+🌐 [Open the live VoxFlow application](https://vox-flow-ai-sand.vercel.app/)
 
 ### Repository
 

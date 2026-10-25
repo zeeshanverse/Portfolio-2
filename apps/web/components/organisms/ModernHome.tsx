@@ -17,8 +17,7 @@ const projects = [
     type: 'Multi Agent System',
     year: '2026',
     description:
-      'An AI-powered company operations platform exploring specialized AI agents for business workflows, project management, research and engineering tasks.',
-    stack: ['AI', 'React', 'Java', 'Spring Boot', 'Docker'],
+      'An AI-powered company operations platform connecting specialized AI agents for business workflows, project management, research and engineering tasks.',    stack: ['AI', 'React', 'Java', 'Spring Boot', 'Docker'],
     repo: 'https://github.com/zeeshanverse/AI-Crew',
     live: 'https://youtu.be/vuon2fvFuXo?si=9jpIOOzOxxhI9Z5U',
     featured: true,
@@ -65,11 +64,10 @@ const projects = [
   {
     slug: 'jobtrack',
     title: 'JobTrack',
-    type: 'In Progress',
+    type: 'Frontend',
     year: '2026',
     description:
-      'An in-progress job application tracker for keeping companies, roles, statuses, job links and application statistics organized.',
-    stack: ['HTML', 'CSS', 'JavaScript'],
+      'A completed job application tracker for keeping companies, roles, statuses, job links and application statistics organized.',    stack: ['HTML', 'CSS', 'JavaScript'],
     repo: 'https://github.com/zeeshanverse/job-tracker',
     featured: true,
   },
@@ -94,7 +92,7 @@ const filters = [
   'Full Stack',
   'Computer Vision',
   'Voice AI',
-  'In Progress',
+  'Frontend',
 ]
 const stack = [
   ['Java', 'Core language'],
@@ -190,7 +188,7 @@ export default function ModernHome() {
               {`    `}<span className="code-comment">// turn ideas into useful software</span>{`\n`}
               {`  }\n}`}</code></pre>
               <div className="terminal-line">
-                <span>●</span> currently building <b>AI-Crew</b> + <b>JobTrack</b>
+                <span>●</span> completed <b>AI-Crew</b> + <b>JobTrack</b>
               </div>
             </div>
           <div className="floating-chip chip-one">REST APIs</div>
@@ -269,7 +267,7 @@ export default function ModernHome() {
             </article>
           ))}
         </div>
-        <div className="view-all-projects"><Link href="/projects" className="modern-btn ghost">View all projects →</Link><span>Completed work, ongoing builds, year, stack and full case studies.</span></div>
+        <div className="view-all-projects"><Link href="/projects" className="modern-btn ghost">View all projects →</Link><span>Completed work, year, stack and full case studies.</span></div>
       </section>
 
       <section className="modern-section engineering-section" id="stack">
