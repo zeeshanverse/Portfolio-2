@@ -58,7 +58,7 @@ const FALLBACK_PROJECTS: ProjectData[] = [
       },
       {
         label: 'live',
-        href: 'https://youtu.be/vuon2fvFuXo',
+        href: 'https://vox-flow-ai-sand.vercel.app/',
       },
     ],
     litTags: [0, 1],
