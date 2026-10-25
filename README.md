@@ -11,7 +11,7 @@ The portfolio includes project showcases, an AI assistant, blog/content sections
 - Modern interactive portfolio UI
 - Responsive design for desktop and mobile
 - Featured projects and dedicated project pages
-- Complete projects listing with completed and ongoing work
+- Complete projects listing with detailed project showcases
 - Project details, technology stacks, GitHub repositories and live demos
 - About, engineering, learning roadmap and recommendations sections
 - Resume available directly from the portfolio
@@ -92,3 +92,4 @@ Portfolio-2/
 ├── pnpm-workspace.yaml
 ├── turbo.json
 └── README.md
+```

@@ -11,11 +11,11 @@ const FALLBACK_PROJECT_DETAILS: Record<string, ProjectDetailResponse> = {
 
     descriptionMd: `## AI-Crew
 
-AI-Crew is an AI-powered company operations platform currently under active development.
+AI-Crew is an AI-powered company operations platform designed around specialized AI agents, human approval workflows, auditability and full-stack application architecture.
 
 The project explores how specialized AI agents can work together to support different areas of a software-driven company while keeping workflows, actions and outputs organized.
 
-### What it aims to do
+### What it does
 
 - 🤖 Provides specialized AI agents for different responsibilities.
 - 🏢 Supports company and business workflows.
@@ -26,25 +26,21 @@ The project explores how specialized AI agents can work together to support diff
 - 🧾 Tracks AI actions and workflow activity.
 - 🔗 Connects multiple AI capabilities through a unified application.
 
-### Architecture direction
+### Architecture
 
-The project is being developed as a full-stack AI application focused on connecting the frontend, backend, AI agents and persistent data layer.
+The project uses a full-stack architecture connecting the frontend, backend, AI agents and persistent data layer.
 
 Frontend → Backend → AI Agents → Data / Services
-
-The architecture is being developed incrementally as the project's capabilities expand.
 
 ### AI agent approach
 
 The central idea is to divide responsibilities between specialized agents instead of placing every capability inside one large assistant.
 
-This creates room for agents focused on areas such as research, engineering, project operations and other company workflows.
+This creates clear boundaries between areas such as research, engineering, project operations and other company workflows.
 
 ### Project status
 
-AI-Crew is currently **in progress**.
-
-The project is actively evolving and should be considered a development project rather than a finished production platform.
+AI-Crew is **completed**.
 
 ### Technology
 
@@ -52,7 +48,7 @@ AI, React, Java, Spring Boot, Docker and supporting full-stack technologies.
 
 ### Engineering focus
 
-AI-Crew is being developed to explore practical AI-agent architecture, full-stack application design, workflow orchestration, persistent data and the integration of AI into real software-engineering workflows.
+AI-Crew explores practical AI-agent architecture, full-stack application design, workflow orchestration, persistent data and the integration of AI into real software-engineering workflows.
 
 ### Repository
 
@@ -65,7 +61,7 @@ AI-Crew is being developed to explore practical AI-agent architecture, full-stac
     role: 'Completed · AI / Full Stack',
 
     startedAt: '2026-09-01T00:00:00.000Z',
-    endedAt: null,
+    endedAt: '2026-10-14T00:00:00.000Z',
 
     liveUrl: null,
     repoUrl: 'https://github.com/zeeshanverse/AI-Crew',
@@ -139,9 +135,9 @@ The backend acts as the central application layer so provider integrations and A
 
 Java, Spring Boot, Spring Security, React, Vite, PostgreSQL, JWT, AssemblyAI, Gemini, ElevenLabs and Docker.
 
-### Project direction
+### Engineering focus
 
-VoxFlow AI is being developed as a practical AI engineering project rather than a simple API demo, with emphasis on backend architecture, provider abstraction, persistence, authentication and real application workflows.
+VoxFlow AI was built as a practical AI engineering project rather than a simple API demo, with emphasis on backend architecture, provider abstraction, persistence, authentication and real application workflows.
 
 ### Repository
 
@@ -154,7 +150,7 @@ VoxFlow AI is being developed as a practical AI engineering project rather than 
     role: 'Full-Stack Voice AI · Java / Spring Boot / React',
 
     startedAt: '2026-09-01T00:00:00.000Z',
-    endedAt: null,
+    endedAt: '2026-10-14T00:00:00.000Z',
 
     liveUrl: null,
     repoUrl: 'https://github.com/zeeshanverse/VoxFlow-AI',
@@ -412,11 +408,11 @@ https://smart-attendance-system-tvmk.onrender.com/api/auth/demo`,
 
     descriptionMd: `## JobTrack
 
-JobTrack is an in-progress job application tracker built to make an active job search easier to organize.
+JobTrack is a job application tracker built to make an active job search easier to organize.
 
 Instead of keeping application details across notes or spreadsheets, the application brings company, role, status and job-link information into one place.
 
-### Current features
+### Features
 
 - 💼 Add and record job applications.
 - 🏢 Track the company and role for each application.
@@ -424,17 +420,13 @@ Instead of keeping application details across notes or spreadsheets, the applica
 - 🔗 Store the original job URL for quick access.
 - 📊 View basic application statistics.
 
-### Current implementation
+### Implementation
 
-The current version uses HTML, CSS and JavaScript. The first iteration focuses on a lightweight application workflow before expanding into a larger full-stack implementation.
-
-### Planned improvements
-
-The roadmap includes local storage, filtering, editing and deleting applications, followed by a React frontend and Spring Boot backend for a more scalable full-stack implementation.
+The project uses HTML, CSS and JavaScript to provide a lightweight application workflow focused on managing job applications efficiently.
 
 ### Project status
 
-JobTrack is currently **in progress** and is being developed incrementally as a practical productivity application.
+JobTrack is **completed**.
 
 ### Technology
 
@@ -442,20 +434,20 @@ HTML5, CSS3 and JavaScript.
 
 ### Engineering focus
 
-The project focuses on building a useful application from a real-world requirement while progressively introducing stronger frontend and backend architecture.
+The project focuses on building a useful application from a real-world requirement while keeping the implementation lightweight, focused and practical.
 
 ### Repository
 
 [GitHub](https://github.com/zeeshanverse/job-tracker)`,
 
     shortDescription:
-      'An in-progress job application tracker for recording companies, roles, application status, job URLs and application statistics.',
+      'A job application tracker for recording companies, roles, application status, job URLs and application statistics.',
 
-    tagline: 'Currently in progress',
-    role: 'In Progress · HTML / CSS / JavaScript',
+    tagline: 'Completed',
+    role: 'Completed · HTML / CSS / JavaScript',
 
     startedAt: '2026-01-01T00:00:00.000Z',
-    endedAt: null,
+    endedAt: '2026-10-26T00:00:00.000Z',
 
     liveUrl: null,
     repoUrl: 'https://github.com/zeeshanverse/job-tracker',

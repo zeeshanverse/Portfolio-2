@@ -3,14 +3,13 @@ import { Api } from '@/lib/api'
 
 export type { PostDetailResponse, PostListItemResponse }
 
-
 const FALLBACK_POSTS: PostListItemResponse[] = [
   {
     id: 'fallback-post-ai-crew',
     slug: 'building-ai-crew',
     title: 'Building AI-Crew: Exploring Multi-Agent Software',
     excerpt:
-      'AI-Crew started as an experiment in how specialized AI agents could work together across company operations, research, project management and engineering workflows.',
+      'AI-Crew explores how specialized AI agents can work together across company operations, research, project management and engineering workflows.',
     coverImage: null,
     readingMinutes: 6,
     publishedAt: '2026-09-28T00:00:00.000Z',
@@ -145,9 +144,9 @@ const FALLBACK_POSTS: PostListItemResponse[] = [
   {
     id: 'fallback-post-jobtrack',
     slug: 'why-i-am-building-jobtrack',
-    title: 'Why I Am Building JobTrack',
+    title: 'Building JobTrack: Turning Job Search Into a Software Project',
     excerpt:
-      'A job-search problem became a project: turning applications, statuses and follow-ups into a focused engineering exercise.',
+      'A real job-search problem became a practical software project for organizing applications, companies, roles, statuses and job links.',
     coverImage: null,
     readingMinutes: 3,
     publishedAt: '2026-08-05T00:00:00.000Z',
@@ -179,13 +178,13 @@ const FALLBACK_POST_DETAILS: Record<string, PostDetailResponse> =
           post.slug === 'building-ai-crew'
             ? `## Why AI-Crew exists
 
-AI-Crew is an experiment in building software around **specialized AI agents** rather than treating AI as a single chat box.
+AI-Crew is a project focused on building software around **specialized AI agents** rather than treating AI as a single chat box.
 
 The idea is simple: different company workflows require different kinds of reasoning, context and actions.
 
-### The direction
+### The architecture
 
-AI-Crew is being developed around several areas:
+AI-Crew brings together several areas:
 
 - Business and company workflows.
 - Project and task management.
@@ -199,7 +198,7 @@ AI-Crew is being developed around several areas:
 
 The interesting part is not simply connecting an LLM API.
 
-The real challenge is designing boundaries between agents, application services, data and the user interface.
+The real challenge is designing clear boundaries between agents, application services, data and the user interface.
 
 A useful AI application still needs the same fundamentals as any other serious software system:
 
@@ -211,15 +210,23 @@ A useful AI application still needs the same fundamentals as any other serious s
 - observability,
 - and controlled execution.
 
-### Why I am building it
+### Why I built it
 
-AI-Crew gives me a practical environment to explore where traditional backend engineering meets modern AI application architecture.
+AI-Crew gave me a practical environment to explore where traditional backend engineering meets modern AI application architecture.
 
-The project is still **in progress**, so the architecture will continue evolving as the product grows.`
+The completed project demonstrates how specialized AI agents, application services, persistent data and controlled workflows can be brought together into a single full-stack system.
+
+### What I learned
+
+Building AI-Crew reinforced the importance of treating AI as part of a larger software system rather than as an isolated API integration.
+
+The project helped me think more carefully about agent boundaries, backend architecture, data persistence, workflow orchestration and controlled AI execution.`
             : post.slug === 'building-voxflow-ai'
               ? `## Building VoxFlow AI
 
-VoxFlow AI is my attempt to build a voice-driven AI application as a **real full-stack system**, rather than a simple browser demo connected directly to an AI provider.
+VoxFlow AI is a full-stack voice-driven AI application built to connect speech, conversational AI and backend engineering into a single system.
+
+The goal was to build something closer to a real application than a simple browser demo connected directly to an AI provider.
 
 The architecture is centered around:
 
@@ -242,30 +249,34 @@ That makes the backend an important part of the system.
 
 ### Why Spring Boot?
 
-The project gives me an opportunity to combine the Java backend skills I am building with AI-oriented services.
+The project gave me an opportunity to combine Java backend engineering with AI-oriented services.
 
 Spring Boot acts as the central application layer while React handles the user experience.
 
-This also keeps provider credentials away from the browser.
+This also keeps provider credentials away from the browser and gives the application a clear backend boundary.
 
 ### The AI stack
 
-The project explores integrations with:
+The project integrates technologies and services including:
 
 - AssemblyAI for speech-to-text.
 - Gemini for conversational AI.
 - ElevenLabs for text-to-speech.
 - PostgreSQL for persistence.
 
-### The bigger goal
+### What I built
 
-I do not want VoxFlow AI to remain a collection of API calls.
+VoxFlow AI brings these components together into a complete application workflow involving voice input, AI processing, spoken responses and persistent application data.
 
-The goal is to turn it into a proper application with authentication, persistent conversations, interview mode and analytics.
+The project helped me understand how external AI services can be integrated behind a structured backend instead of being exposed directly to the frontend.
 
-That is where the interesting engineering work begins.`
-                : post.slug === 'what-building-a-banking-api-taught-me'
-                  ? `## Beyond CRUD
+### What I learned
+
+The biggest lesson from VoxFlow AI was that AI features still require strong software engineering fundamentals.
+
+Authentication, persistence, provider abstraction, API design and backend architecture are just as important as the AI integration itself.`
+              : post.slug === 'what-building-a-banking-api-taught-me'
+                ? `## Beyond CRUD
 
 Building the Banking System changed how I think about backend development.
 
@@ -303,8 +314,8 @@ The project helped me move from learning individual Spring Boot concepts toward 
 It also reinforced something I keep seeing across my projects:
 
 **good software is mostly about managing boundaries and responsibilities clearly.**`
-                  : post.slug === 'lessons-from-attend-ai'
-                    ? `## Leading Attend AI
+                : post.slug === 'lessons-from-attend-ai'
+                  ? `## Leading Attend AI
 
 Attend AI was my **final-year project**, and I led the project team through planning, task allocation, integration, debugging and final delivery.
 
@@ -329,35 +340,34 @@ The computer-vision pipeline handles face detection and recognition while the ba
 The project became more than a computer-vision exercise.
 
 It taught me how to take responsibility for a product from idea to delivery.`
-                      : post.slug === 'why-i-am-building-jobtrack'
-                        ? `## Why I Am Building JobTrack
+                  : post.slug === 'why-i-am-building-jobtrack'
+                    ? `## Building JobTrack
 
 JobTrack started from a real problem.
 
-I am actively job hunting, which means applications, companies, roles, job links and statuses can quickly become difficult to keep organized.
+Managing job applications means keeping track of companies, roles, job links and application statuses across different opportunities.
 
-Instead of treating that as just another spreadsheet problem, I decided to turn it into a software project.
+Instead of treating that as just another spreadsheet problem, I turned it into a software project.
 
-### The first version
+### The implementation
 
-The current implementation is intentionally simple:
+The completed version focuses on a lightweight application workflow built with:
 
 - HTML.
 - CSS.
 - JavaScript.
 
-The goal is to establish the core workflow before introducing more infrastructure.
+The application provides a simple way to organize job applications and keep important information together.
 
-### What comes next
+### What I built
 
-The planned direction includes:
+The project focuses on the core workflow required to manage applications:
 
-- Local storage.
-- Filtering.
-- Editing applications.
-- Deleting applications.
-- A React frontend.
-- A Spring Boot backend.
+- Recording job applications.
+- Storing company and role information.
+- Tracking application status.
+- Keeping job URLs accessible.
+- Organizing application information in one place.
 
 ### Why this project matters
 
@@ -365,10 +375,12 @@ JobTrack is also an exercise in product thinking.
 
 Start with a real problem.
 
-Build the smallest useful version.
+Build a focused solution.
 
-Then let the requirements determine how the architecture should evolve.`
-                        : `## Building Toward Java Full-Stack Engineering
+Keep the implementation practical.
+
+Then use the finished product to understand what makes an application genuinely useful.`
+                    : `## Building Toward Java Full-Stack Engineering
 
 My current learning path is centered on Java, Spring Boot, Spring Security, REST APIs, SQL, React, Docker and microservices.
 
@@ -382,7 +394,7 @@ MyMeal helped me understand a complete frontend-to-backend web workflow.
 
 ATTEND AI introduced computer vision and a different kind of application pipeline.
 
-VoxFlow AI now combines backend engineering with AI and speech technologies.
+VoxFlow AI combines backend engineering with AI and speech technologies.
 
 AI-Crew takes that exploration further into AI-oriented application architecture.
 
@@ -399,7 +411,7 @@ That means understanding the trade-offs, boundaries and engineering decisions be
         deletedAt: null,
       },
     ]),
-  );
+  )
 
 const api = new Api()
 
@@ -424,7 +436,11 @@ export async function getPosts(): Promise<PostListItemResponse[]> {
 export async function getPost(slug: string): Promise<PostDetailResponse | null> {
   try {
     const res = await api.get(`/posts/${slug}`, { next: { revalidate: 60 } })
-    if (!res.ok) return FALLBACK_POST_DETAILS[slug] ?? null
+
+    if (!res.ok) {
+      return FALLBACK_POST_DETAILS[slug] ?? null
+    }
+
     return res.json() as Promise<PostDetailResponse>
   } catch {
     return FALLBACK_POST_DETAILS[slug] ?? null
@@ -438,19 +454,30 @@ export async function getAllSlugs(): Promise<string[]> {
 
 export function getAllTags(posts: PostListItemResponse[]): [string, number][] {
   const counts = new Map<string, number>()
+
   for (const p of posts) {
     for (const t of p.tags) {
       counts.set(t.label, (counts.get(t.label) ?? 0) + 1)
     }
   }
+
   return [
     ['all', posts.length] as [string, number],
     ...Array.from(counts.entries()).sort((a, b) => b[1] - a[1]),
   ]
 }
 
-export function formatDate(iso: string): { day: string; month: string; year: number } {
+export function formatDate(iso: string): {
+  day: string
+  month: string
+  year: number
+} {
   const d = new Date(iso)
   const month = d.toLocaleString('en-US', { month: 'short' }).toUpperCase()
-  return { day: String(d.getDate()).padStart(2, '0'), month, year: d.getFullYear() }
+
+  return {
+    day: String(d.getDate()).padStart(2, '0'),
+    month,
+    year: d.getFullYear(),
+  }
 }

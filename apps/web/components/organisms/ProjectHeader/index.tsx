@@ -3,14 +3,24 @@ import { formatProjectDate, type ProjectDetailResponse } from '@/services/projec
 
 const ProjectHeader = ({ project }: { project: ProjectDetailResponse }) => {
   const start = formatProjectDate(project.startedAt)
-  const end = project.endedAt ? 'completed' : 'ongoing'
+
+  // All portfolio projects are now completed.
+  // Do not derive an "ongoing" state from a missing endedAt value.
+  const end = project.endedAt
+    ? formatProjectDate(project.endedAt)
+    : 'completed'
+
   const dateRange = start ? `${start} – ${end}` : null
 
   return (
     <header className="pb-8 mb-10 border-b border-[var(--border)]">
       <div className="flex gap-1.5 flex-wrap mb-[18px]">
         {project.tags.map((t, i) => (
-          <Tag key={t.id} label={`#${t.label}`} highlighted={i === 0} />
+          <Tag
+            key={t.id}
+            label={`#${t.label}`}
+            highlighted={i === 0}
+          />
         ))}
       </div>
 
@@ -26,11 +36,17 @@ const ProjectHeader = ({ project }: { project: ProjectDetailResponse }) => {
 
       <div className="flex gap-3.5 flex-wrap items-center font-[family-name:var(--font-mono)] text-[12.5px] text-[var(--text-dim)]">
         {project.role && <span>{project.role}</span>}
-        {project.role && dateRange && <span className="text-[var(--text-faint)]">·</span>}
+
+        {project.role && dateRange && (
+          <span className="text-[var(--text-faint)]">·</span>
+        )}
+
         {dateRange && <span>{dateRange}</span>}
+
         {(project.liveUrl || project.repoUrl) && (
           <span className="text-[var(--text-faint)]">·</span>
         )}
+
         {project.liveUrl && (
           <a
             href={project.liveUrl}
@@ -41,6 +57,7 @@ const ProjectHeader = ({ project }: { project: ProjectDetailResponse }) => {
             ↗ live
           </a>
         )}
+
         {project.repoUrl && (
           <a
             href={project.repoUrl}

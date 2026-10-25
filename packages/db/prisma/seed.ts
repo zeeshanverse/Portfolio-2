@@ -83,10 +83,10 @@ async function main() {
   {
     slug: 'ai-crew',
     title: 'AI-Crew',
-    role: 'In Progress · AI / Full Stack',
+    role: 'Comleted · AI / Full Stack',
     shortDescription:
       'An AI-powered company operations platform exploring specialized AI agents for business workflows, project management, research and engineering tasks.',
-    tagline: 'Currently in progress',
+    tagline: 'Completed',
 
     descriptionMd:
       '## AI-Crew\n\n' +
