@@ -61,8 +61,8 @@ AI-Crew is being developed to explore practical AI-agent architecture, full-stac
     shortDescription:
       'An AI-powered company operations platform exploring specialized AI agents for business workflows, project management, research and engineering tasks.',
 
-    tagline: 'Currently in progress',
-    role: 'In Progress · AI / Full Stack',
+    tagline: 'Completed',
+    role: 'Completed · AI / Full Stack',
 
     startedAt: '2026-09-01T00:00:00.000Z',
     endedAt: null,
