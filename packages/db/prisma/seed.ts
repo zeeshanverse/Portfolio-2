@@ -42,6 +42,9 @@ async function main() {
       { slug: 'html', label: 'HTML', color: '#E34F26' },
       { slug: 'css', label: 'CSS', color: '#1572B6' },
       { slug: 'docker', label: 'Docker', color: '#2496ED' },
+      { slug: 'typescript', label: 'TypeScript', color: '#3178C6' },
+      { slug: 'postgresql', label: 'PostgreSQL', color: '#4169E1' },
+      { slug: 'jwt', label: 'JWT', color: '#000000' },
       { slug: 'ai', label: 'AI', color: '#8B5CF6' },
     ].map((tag) =>
       prisma.tag.upsert({
@@ -289,26 +292,34 @@ async function main() {
     {
       slug: 'jobtrack',
       title: 'JobTrack',
-      role: 'Frontend Web Application · HTML / CSS / JavaScript',
+      role: 'Full-Stack Application · Java / Spring Boot / React',
       shortDescription:
-        'A job application tracker for recording companies, roles, application status, job URLs and application statistics.',
+        'A production-oriented full-stack job application tracker with JWT authentication, application management, dashboard analytics, search, filtering and PostgreSQL persistence.',
       tagline: 'Job Application Tracker',
 
       descriptionMd:
         '## JobTrack\n\n' +
-        'JobTrack is a job application tracker built to organize and manage an active job search through a simple web application.\n\n' +
+        'JobTrack is a production-oriented full-stack job application tracker built to make an active job search easier to organize. It provides JWT authentication, application management, dashboard analytics, search and filtering, with PostgreSQL persistence.\n\n' +
         '### Features\n\n' +
-        '- Add and record job applications.\n' +
-        '- Track companies and roles.\n' +
-        '- Track application status.\n' +
-        '- Store job URLs.\n' +
-        '- View application statistics.\n\n' +
+        '- Add and manage job applications.\n' +
+        '- Track companies, roles, statuses and priorities.\n' +
+        '- Store job URLs and application details.\n' +
+        '- Search and filter applications.\n' +
+        '- View application dashboard statistics.\n' +
+        '- Secure authentication with JWT and BCrypt.\n' +
+        '- User-specific application data isolation.\n\n' +
+        '### Architecture\n\n' +
+        'React / TypeScript frontend → Spring Boot REST API → PostgreSQL\n\n' +
         '### Implementation\n\n' +
-        'The application uses HTML, CSS and JavaScript to provide the job tracking interface and application workflow.\n\n' +
+        'The backend is built with Java 21 and Spring Boot, using Spring Security, JWT authentication, Spring Data JPA and PostgreSQL. The frontend is built with React and TypeScript and communicates with the backend through REST APIs.\n\n' +
         '### Project status\n\n' +
-        'JobTrack is a completed portfolio project demonstrating a practical frontend application for organizing job applications.\n\n' +
+        'JobTrack is a completed production-oriented portfolio project.\n\n' +
+        '### Technology\n\n' +
+        'Java 21, Spring Boot, Spring Security, JWT, React, TypeScript, PostgreSQL and Docker.\n\n' +
         '### Repository\n\n' +
-        '[GitHub](https://github.com/zeeshanverse/job-tracker)',
+        '[GitHub](https://github.com/zeeshanverse/job-tracker)\n\n' +
+        '### Live Demo\n\n' +
+        'https://job-track-frontend-iota.vercel.app',
 
       startedAt: new Date('2026-01-01'),
       endedAt: new Date('2026-10-26'),
@@ -317,14 +328,18 @@ async function main() {
       published: true,
       displayOrder: 4,
 
-      liveUrl: null,
+      liveUrl: 'https://job-track-frontend-iota.vercel.app/',
       repoUrl: 'https://github.com/zeeshanverse/job-tracker',
 
       projectTags: {
         create: [
-          { tag: { connect: { slug: 'html' } } },
-          { tag: { connect: { slug: 'css' } } },
-          { tag: { connect: { slug: 'javascript' } } },
+          { tag: { connect: { slug: 'java' } } },
+          { tag: { connect: { slug: 'spring-boot' } } },
+          { tag: { connect: { slug: 'react' } } },
+          { tag: { connect: { slug: 'typescript' } } },
+          { tag: { connect: { slug: 'postgresql' } } },
+          { tag: { connect: { slug: 'jwt' } } },
+          { tag: { connect: { slug: 'docker' } } },
         ],
       },
     },

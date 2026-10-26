@@ -64,11 +64,13 @@ const projects = [
   {
     slug: 'jobtrack',
     title: 'JobTrack',
-    type: 'Frontend',
+    type: 'Full-Stack',
     year: '2026',
     description:
-      'A completed job application tracker for keeping companies, roles, statuses, job links and application statistics organized.',    stack: ['HTML', 'CSS', 'JavaScript'],
+      'A production-oriented full-stack job application tracker with JWT authentication, application management, dashboard analytics, search, filtering and PostgreSQL persistence.',  
+    stack: ['Java','Spring Boot','React','TypeScript','PostgreSQL','JWT','Docker',],
     repo: 'https://github.com/zeeshanverse/job-tracker',
+    live: 'https://job-track-frontend-iota.vercel.app',
     featured: true,
   },
 
@@ -92,7 +94,7 @@ const filters = [
   'Full Stack',
   'Computer Vision',
   'Voice AI',
-  'Frontend',
+  'Full-Stack',
 ]
 const stack = [
   ['Java', 'Core language'],

@@ -418,7 +418,7 @@ https://smart-attendance-system-tvmk.onrender.com/api/auth/demo`,
 
     descriptionMd: `## JobTrack
 
-JobTrack is a job application tracker built to make an active job search easier to organize.
+JobTrack is a production-oriented full-stack job application tracker built to make an active job search easier to organize. It provides JWT authentication, application management, dashboard analytics, search and filtering, with PostgreSQL persistence.
 
 Instead of keeping application details across notes or spreadsheets, the application brings company, role, status and job-link information into one place.
 
@@ -440,7 +440,7 @@ JobTrack is **completed**.
 
 ### Technology
 
-HTML5, CSS3 and JavaScript.
+Java 21, Spring Boot, React, TypeScript, PostgreSQL, JWT and Docker.
 
 ### Engineering focus
 
@@ -459,7 +459,7 @@ The project focuses on building a useful application from a real-world requireme
     startedAt: '2026-01-01T00:00:00.000Z',
     endedAt: '2026-10-26T00:00:00.000Z',
 
-    liveUrl: null,
+    liveUrl: 'https://job-track-frontend-iota.vercel.app',
     repoUrl: 'https://github.com/zeeshanverse/job-tracker',
 
     featured: true,

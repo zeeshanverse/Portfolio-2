@@ -107,9 +107,14 @@ const FALLBACK_PROJECTS: ProjectData[] = [
     slug: 'jobtrack',
     title: 'JobTrack',
     year: '2026',
-    role: 'Frontend Web Application · HTML / CSS / JavaScript',
-    desc: 'A job application tracker for recording companies, roles, application status, job URLs and application statistics.',    tags: ['HTML', 'CSS', 'JavaScript'],
+    role: 'Full-Stack Application · Java / Spring Boot / React',
+    desc: 'A production-oriented full-stack job application tracker with JWT authentication, application management, dashboard analytics, search, filtering and PostgreSQL persistence.',
+    tags: ['Java','Spring Boot','React','TypeScript','PostgreSQL','JWT','Docker',],
     links: [
+      {
+        label: 'live',
+        href: 'https://job-track-frontend-iota.vercel.app',
+      },
       {
         label: 'repo',
         href: 'https://github.com/zeeshanverse/job-tracker',
